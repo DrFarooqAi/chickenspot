@@ -1,4 +1,4 @@
-# بقعة الدجاج | Chicken Spot
+# بروست د. فاروق الحار | Dr Farooq Spicy Broast
 
 A one-page website for a broast chicken shop, which customers can also install as an app. Customers browse the menu, then send their order to the shop on WhatsApp. No server, database or monthly fees are needed: it runs free on GitHub Pages.
 
@@ -38,8 +38,8 @@ Open `index.html` and find the block marked **SHOP SETTINGS**. It's near the bot
 
 ```js
 const SHOP = {
-  name_ar: "بقعة الدجاج",
-  name_en: "Chicken Spot",
+  name_ar: "بروست د. فاروق الحار",
+  name_en: "Dr Farooq Spicy Broast",
   whatsapp: "966500000000",                 // shop WhatsApp, international format, no + or spaces
   phone: "+966500000000",
   map: "https://maps.google.com/?q=Riyadh", // paste the shop's Google Maps share link
