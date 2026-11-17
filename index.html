@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>بروست د. فاروق الحار | Dr Farooq Spicy Broast</title>
-<meta name="description" content="بروست طازج وساخن — اطلب عبر واتساب واستلم خلال دقائق">
+<meta name="description" content="بروست حار طازج — اطلب عبر واتساب واستلم خلال دقائق">
 <meta name="theme-color" content="#C2410C">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icon-192.png">
@@ -13,87 +13,143 @@
 <meta name="apple-mobile-web-app-title" content="بروست د. فاروق">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta property="og:title" content="بروست د. فاروق الحار | Dr Farooq Spicy Broast">
-<meta property="og:description" content="اطلب بروستك عبر واتساب — ٤ قطع ٢٠ ر.س • ٨ قطع ٣٠ ر.س">
+<meta property="og:description" content="بروست حار ومقرمش — عروض يومية، اطلب عبر واتساب">
+<meta property="og:image" content="icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--brand:#C2410C;--brand-dark:#7C2D12;--gold:#F59E0B;--cream:#FFF8EE;--ink:#2B1A10;--soft:#8A6A55;--green:#16A34A}
+:root{--brand:#C2410C;--brand-dark:#7C2D12;--gold:#F59E0B;--cream:#FFF8EE;--ink:#2B1A10;--soft:#8A6A55;--line:#F3E3CF;--tint:#FFF1E0;--green:#16A34A;--red:#DC2626}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{font-family:'Cairo',system-ui,sans-serif;background:var(--cream);color:var(--ink);padding-bottom:calc(96px + env(safe-area-inset-bottom))}
-.wrap{max-width:520px;margin:0 auto;padding:0 16px}
-section{padding:22px 0 6px}
-h2.sec{font-size:20px;font-weight:800;margin-bottom:12px}
-/* top bar */
-.topbar{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid #F3E3CF;padding-top:env(safe-area-inset-top)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
-.brand img{width:36px;height:36px;border-radius:10px}
-.pill{border:1.5px solid #EBD6BE;background:#fff;color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer}
-/* hero */
-.hero{background:linear-gradient(160deg,#FFEDD5 0%,#FED7AA 100%);border-radius:0 0 32px 32px;padding:26px 0 30px;overflow:hidden}
-.hero .wrap{display:flex;align-items:center;gap:14px}
-.hero h1{font-size:30px;font-weight:800;line-height:1.25;color:var(--brand-dark)}
-.hero p{font-size:15px;color:#7a4a2a;margin:8px 0 16px}
-.hero .art{flex:none;width:118px;height:118px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(194,65,12,.18)}
-.cta{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:12px 22px;border-radius:14px}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;background:#fff;padding:3px 12px;border-radius:20px;margin-bottom:10px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-.dot.closed{background:#DC2626}
-/* features */
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.feat{background:#fff;border-radius:16px;padding:12px 6px;text-align:center;font-size:13px;font-weight:600}
-.feat .ic{font-size:24px;display:block;margin-bottom:2px}
-/* menu */
-.card{background:#fff;border-radius:20px;padding:14px;display:flex;align-items:center;gap:14px;margin-bottom:14px;border:2px solid transparent;position:relative;box-shadow:0 2px 0 rgba(124,45,18,.06)}
-.card.best{border-color:var(--gold)}
-.badge{position:absolute;top:-11px;inset-inline-start:16px;background:var(--gold);color:var(--brand-dark);font-size:12px;font-weight:800;padding:2px 12px;border-radius:20px}
-.pic{width:84px;height:84px;flex:none;border-radius:16px;background:#FFF1E0;display:flex;align-items:center;justify-content:center}
-.info{flex:1;min-width:0}
-.info h3{font-size:19px;font-weight:800}
-.info .sub{font-size:13px;color:var(--soft)}
-.price{font-size:20px;font-weight:800;color:var(--brand);margin-top:2px}
-.qty{display:flex;flex-direction:column;align-items:center;gap:4px}
-.qty button{width:40px;height:40px;border-radius:50%;border:0;font-size:24px;font-weight:600;cursor:pointer;line-height:1}
-.plus{background:var(--brand);color:#fff}
-.minus{background:#FFF1E0;color:var(--brand-dark)}
-.qty span{font-size:18px;font-weight:800;min-width:24px;text-align:center}
-.box{background:#fff;border-radius:20px;padding:14px;margin-bottom:12px}
-.box h3{font-size:15px;font-weight:800;margin-bottom:10px}
-.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.mode{border:2px solid #F3E3CF;background:#fff;border-radius:14px;padding:12px 8px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;color:var(--ink)}
-.mode.on{border-color:var(--brand);background:#FFF1E0;color:var(--brand-dark)}
-input{width:100%;font:inherit;font-size:15px;padding:12px;border:2px solid #F3E3CF;border-radius:12px;margin-top:10px;background:#fff;color:var(--ink)}
-input:focus{outline:none;border-color:var(--brand)}
-.loc{width:100%;margin-top:10px;font:inherit;font-size:14px;font-weight:600;padding:12px;border-radius:12px;border:2px dashed var(--brand);background:#fff;color:var(--brand);cursor:pointer}
-.loc.ok{border-style:solid;background:#ECFDF3;border-color:var(--green);color:#166534}
+body{font-family:'Cairo',system-ui,sans-serif;background:var(--cream);color:var(--ink);padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+body.lock{overflow:hidden}
+button{font:inherit;color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px}
 .hide{display:none!important}
-.pay{font-size:13px;color:var(--soft);text-align:center;margin:2px 0 4px}
-/* info */
+/* top bar */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.95);backdrop-filter:blur(8px);padding-top:env(safe-area-inset-top)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;min-width:0}
+.brand img{width:36px;height:36px;border-radius:10px;flex:none}
+.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill{flex:none;border:1.5px solid #EBD6BE;background:#fff;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(160deg,#FFEDD5 0%,#FED7AA 100%);border-radius:0 0 28px 28px;padding:18px 0 22px}
+.hero .wrap{display:flex;align-items:center;gap:14px}
+.hero h1{font-size:26px;font-weight:800;line-height:1.3;color:var(--brand-dark)}
+.hero p{font-size:14px;color:#7a4a2a;margin-top:6px}
+.hero .art{flex:none;width:96px;height:96px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(194,65,12,.18)}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;background:#fff;padding:3px 12px;border-radius:20px;margin-bottom:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.dot.closed{background:var(--red)}
+/* sticky category tabs */
+.tabs{position:sticky;top:calc(58px + env(safe-area-inset-top));z-index:15;background:rgba(255,248,238,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-top:10px;padding-bottom:10px}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:none;border:0;background:#fff;font-size:14px;font-weight:700;padding:7px 16px;border-radius:20px;cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line)}
+.tab.on{background:var(--brand);color:#fff;box-shadow:none}
+/* reorder */
+.reorder{margin-top:16px;width:100%;display:flex;align-items:center;gap:12px;text-align:start;background:#fff;border:2px solid var(--green);border-radius:18px;padding:12px 14px;cursor:pointer}
+.reorder .ic{font-size:26px}
+.reorder b{display:block;font-size:15px;color:#166534}
+.reorder span{font-size:13px;color:var(--soft)}
+.reorder .go{margin-inline-start:auto;background:var(--green);color:#fff;font-weight:800;font-size:13px;padding:6px 12px;border-radius:12px;flex:none}
+/* menu */
+.cat{padding-top:20px;scroll-margin-top:calc(118px + env(safe-area-inset-top))}
+.cat h2{font-size:20px;font-weight:800;margin-bottom:4px}
+.cat .hint{font-size:13px;color:var(--soft);margin-bottom:12px}
+.card{background:#fff;border-radius:20px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:12px;border:2px solid transparent;position:relative;cursor:pointer;width:100%;text-align:start;box-shadow:0 2px 0 rgba(124,45,18,.06)}
+.card.deal{border-color:var(--gold);margin-top:6px}
+.badge{position:absolute;top:-11px;inset-inline-start:14px;background:var(--gold);color:var(--brand-dark);font-size:12px;font-weight:800;padding:1px 12px;border-radius:20px}
+.badge.hot{background:var(--brand);color:#fff}
+.pic{width:76px;height:76px;flex:none;border-radius:16px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:38px;position:relative}
+.incart{position:absolute;top:-6px;inset-inline-end:-6px;background:var(--green);color:#fff;font-size:12px;font-weight:800;min-width:22px;height:22px;border-radius:11px;display:flex;align-items:center;justify-content:center;padding:0 6px}
+.info{flex:1;min-width:0}
+.info h3{font-size:17px;font-weight:800;line-height:1.35}
+.info .sub{font-size:13px;color:var(--soft);line-height:1.5}
+.price{font-size:17px;font-weight:800;color:var(--brand);margin-top:2px}
+.price s{color:#B39A88;font-size:13px;font-weight:600;margin-inline-start:6px}
+.chili{font-size:12px;font-weight:700;color:var(--red)}
+.add{flex:none;width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;border:0;font-size:24px;font-weight:600;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+/* visit + install */
+.sec{font-size:20px;font-weight:800;margin:24px 0 12px}
 .infogrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tile{background:#fff;border-radius:16px;padding:14px;text-decoration:none;color:var(--ink);display:block}
+.tile{background:#fff;border-radius:16px;padding:14px;text-decoration:none;color:var(--ink);display:block;cursor:pointer}
 .tile b{display:block;font-size:14px;font-weight:800}
 .tile span{font-size:13px;color:var(--soft)}
 .tile .ic{font-size:22px}
 .social{display:flex;gap:10px;margin-top:12px}
 .social a{flex:1;background:#fff;border-radius:14px;padding:10px;text-align:center;text-decoration:none;color:var(--ink);font-size:13px;font-weight:600}
-/* install */
-.install{background:#fff;border:2px dashed var(--gold);border-radius:20px;padding:14px;display:flex;align-items:center;gap:12px}
+.install{margin-top:20px;background:#fff;border:2px dashed var(--gold);border-radius:20px;padding:14px;display:flex;align-items:center;gap:12px}
 .install img{width:52px;height:52px;border-radius:14px;flex:none}
 .install b{font-size:15px;display:block}
 .install span{font-size:13px;color:var(--soft)}
-.install button{margin-inline-start:auto;flex:none;background:var(--brand);color:#fff;border:0;font:inherit;font-weight:800;font-size:14px;padding:10px 14px;border-radius:12px;cursor:pointer}
-.ios{font-size:13px;color:var(--brand-dark);background:#FFF1E0;border-radius:12px;padding:10px;margin-top:10px;line-height:1.7}
+.install button{margin-inline-start:auto;flex:none;background:var(--brand);color:#fff;border:0;font-weight:800;font-size:14px;padding:10px 14px;border-radius:12px;cursor:pointer}
+.ios{font-size:13px;color:var(--brand-dark);background:var(--tint);border-radius:12px;padding:10px;margin-top:10px;line-height:1.7}
 footer{text-align:center;font-size:12px;color:#B39A88;padding:22px 0 10px}
 /* bottom bar */
 .bar{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.08)}
-.bar .in{max-width:520px;margin:0 auto}
+.bar .in{max-width:560px;margin:0 auto}
+.big{width:100%;border:0;border-radius:16px;background:var(--brand);color:#fff;font-size:17px;font-weight:800;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer}
+.big.wa{background:var(--green)}
+.big .r{background:rgba(255,255,255,.22);padding:2px 12px;border-radius:10px;white-space:nowrap}
+.big .l{display:flex;align-items:center;gap:8px}
+.count{background:#fff;color:var(--brand);border-radius:10px;min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;padding:0 6px}
+/* sheets */
+.shade{position:fixed;inset:0;z-index:50;background:rgba(43,26,16,.45);opacity:0;pointer-events:none;transition:opacity .2s}
+.shade.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:60;max-width:560px;margin:0 auto;background:var(--cream);border-radius:24px 24px 0 0;max-height:92vh;display:flex;flex-direction:column;transform:translateY(105%);transition:transform .25s ease}
+.sheet.on{transform:none}
+.sh-head{display:flex;align-items:center;gap:12px;padding:16px 16px 10px}
+.sh-head h3{font-size:19px;font-weight:800;flex:1}
+.x{flex:none;width:36px;height:36px;border-radius:50%;border:0;background:#fff;font-size:20px;cursor:pointer}
+.sh-body{overflow-y:auto;padding:0 16px 12px;flex:1}
+.sh-foot{padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.grp{background:#fff;border-radius:18px;padding:12px 14px;margin-bottom:12px}
+.grp h4{font-size:14px;font-weight:800;margin-bottom:8px;display:flex;justify-content:space-between}
+.grp h4 small{font-weight:600;color:var(--soft);font-size:12px}
+.opt{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);cursor:pointer;width:100%;background:none;border-left:0;border-right:0;border-bottom:0;text-align:start}
+.opt:first-of-type{border-top:0}
+.opt .mk{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #D6BFA6;display:flex;align-items:center;justify-content:center}
+.opt.chk .mk{border-radius:7px}
+.opt.on .mk{border-color:var(--brand);background:var(--brand)}
+.opt.on .mk::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.opt.chk.on .mk::after{width:10px;height:6px;border-radius:0;background:none;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.opt .t{flex:1;min-width:0}
+.opt .t b{display:block;font-size:15px;font-weight:700}
+.opt .t span{font-size:12px;color:var(--soft)}
+.opt .p{font-size:14px;font-weight:800;color:var(--brand);flex:none}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.segb{border:2px solid var(--line);background:#fff;border-radius:14px;padding:11px 8px;font-size:15px;font-weight:700;cursor:pointer}
+.segb.on{border-color:var(--brand);background:var(--tint);color:var(--brand-dark)}
+.step{display:flex;align-items:center;gap:6px;flex:none}
+.step button{width:34px;height:34px;border-radius:50%;border:0;font-size:20px;font-weight:700;cursor:pointer;line-height:1;background:var(--tint);color:var(--brand-dark)}
+.step button.pl{background:var(--brand);color:#fff}
+.step span{min-width:22px;text-align:center;font-weight:800;font-size:16px}
+.qrow{display:flex;align-items:center;justify-content:space-between}
+/* cart */
+.line{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+.line:first-child{border-top:0}
+.line .t{flex:1;min-width:0}
+.line .t b{display:block;font-size:15px}
+.line .t span{display:block;font-size:12px;color:var(--soft)}
+.line .t i{font-style:normal;font-weight:800;color:var(--brand);font-size:14px}
+.more{display:block;width:100%;background:none;border:2px dashed #E3C9AC;border-radius:14px;padding:10px;font-weight:700;color:var(--brand);cursor:pointer;margin-top:4px}
+textarea,input{width:100%;font:inherit;font-size:15px;padding:11px 12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);resize:none}
+textarea:focus,input:focus{outline:none;border-color:var(--brand)}
+input{margin-top:10px}
+.loc{width:100%;margin-top:10px;font-size:14px;font-weight:700;padding:11px;border-radius:12px;border:2px dashed var(--brand);background:#fff;color:var(--brand);cursor:pointer}
+.loc.ok{border-style:solid;background:#ECFDF3;border-color:var(--green);color:#166534}
+.branches{display:grid;gap:8px}
+.notice{background:#FEF2F2;color:#991B1B;border-radius:12px;padding:10px 12px;font-size:13px;font-weight:600;margin-bottom:12px}
+.sumrow{display:flex;justify-content:space-between;font-size:15px;padding:4px 0}
+.sumrow.tot{font-size:18px;font-weight:800;border-top:1px solid var(--line);margin-top:6px;padding-top:10px}
+.pay{font-size:13px;color:var(--soft);text-align:center;margin:4px 0 8px}
 .err{color:#B91C1C;font-size:13px;font-weight:700;text-align:center;margin-bottom:6px}
 .err:empty{display:none}
-.order{width:100%;border:0;border-radius:16px;background:var(--green);color:#fff;font:inherit;font-size:18px;font-weight:800;padding:14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
-.order .total{background:rgba(255,255,255,.22);padding:2px 12px;border-radius:10px}
-.order .lbl{display:flex;align-items:center;gap:8px}
-.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:14px;padding:8px 16px;border-radius:20px;z-index:40;opacity:0;transition:opacity .2s;pointer-events:none}
+.empty{text-align:center;padding:30px 0;color:var(--soft)}
+.empty div{font-size:44px}
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:14px;padding:8px 16px;border-radius:20px;z-index:90;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1}
 </style>
 </head>
@@ -105,170 +161,356 @@ footer{text-align:center;font-size:12px;color:#B39A88;padding:22px 0 10px}
 </div></div>
 
 <header class="hero"><div class="wrap">
-  <div style="flex:1">
+  <div style="flex:1;min-width:0">
     <span class="status"><span class="dot" id="dot"></span><span id="openTxt"></span></span>
     <h1 id="heroTitle"></h1>
     <p id="heroSub"></p>
-    <a href="#menu" class="cta" data-t="orderNow"></a>
   </div>
-  <div class="art"><svg width="78" height="78" viewBox="0 0 64 64"><path d="M40 6c10 0 18 8 18 18 0 9-6 16-14 18l-8 2-10 10c1 3 0 6-3 7-2 1-5 0-6-2-2 1-5 0-6-2-1-3 0-5 3-6l10-10 2-8c2-8 9-15 14-15z" fill="#D9822B"/><path d="M44 12c5 1 9 5 9 11" stroke="#FCD9A0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M26 30l-3 9M33 26l-2 7" stroke="#A85A16" stroke-width="2" stroke-linecap="round"/></svg></div>
+  <div class="art" id="heroArt"></div>
 </div></header>
 
+<nav class="tabs"><div class="wrap" id="tabs"></div></nav>
+
 <main class="wrap">
-  <section>
-    <div class="feats">
-      <div class="feat"><span class="ic">🔥</span><span data-t="f1"></span></div>
-      <div class="feat"><span class="ic">⏱️</span><span data-t="f2"></span></div>
-      <div class="feat"><span class="ic">👨‍👩‍👧</span><span data-t="f3"></span></div>
-    </div>
-  </section>
+  <button class="reorder hide" id="reorder" onclick="reorder()"></button>
+  <div id="menu"></div>
 
-  <section id="menu">
-    <h2 class="sec" data-t="menuTitle"></h2>
-    <div id="items"></div>
-    <div class="box">
-      <h3 data-t="how"></h3>
-      <div class="modes">
-        <button class="mode" id="m-pickup" onclick="setMode('pickup')" data-t="pickup"></button>
-        <button class="mode" id="m-delivery" onclick="setMode('delivery')" data-t="delivery"></button>
-      </div>
-      <input id="name" data-p="name" autocomplete="name">
-      <div id="deliveryBox" class="hide">
-        <button class="loc" id="locBtn" onclick="getLoc()" data-t="loc"></button>
-        <input id="addr" data-p="addr">
-      </div>
-    </div>
-    <p class="pay" data-t="pay"></p>
-  </section>
+  <h2 class="sec" data-t="visit"></h2>
+  <div class="infogrid">
+    <a class="tile" id="mapLink" target="_blank" rel="noopener"><span class="ic">📍</span><b data-t="map"></b><span id="areaTxt"></span></a>
+    <a class="tile" id="callLink"><span class="ic">📞</span><b data-t="call"></b><span id="phoneTxt" dir="ltr"></span></a>
+    <div class="tile"><span class="ic">🕛</span><b data-t="hoursT"></b><span id="hoursTxt"></span></div>
+    <a class="tile" onclick="share()"><span class="ic">🔗</span><b data-t="share"></b><span data-t="shareSub"></span></a>
+  </div>
+  <div class="social" id="social"></div>
 
-  <section>
-    <h2 class="sec" data-t="visit"></h2>
-    <div class="infogrid">
-      <a class="tile" id="mapLink" target="_blank" rel="noopener"><span class="ic">📍</span><b data-t="map"></b><span id="areaTxt"></span></a>
-      <a class="tile" id="callLink"><span class="ic">📞</span><b data-t="call"></b><span id="phoneTxt" dir="ltr"></span></a>
-      <div class="tile"><span class="ic">🕛</span><b data-t="hoursT"></b><span id="hoursTxt"></span></div>
-      <a class="tile" onclick="share()" style="cursor:pointer"><span class="ic">🔗</span><b data-t="share"></b><span data-t="shareSub"></span></a>
-    </div>
-    <div class="social" id="social"></div>
-  </section>
-
-  <section id="installSec">
+  <div id="installSec">
     <div class="install">
       <img src="icon-192.png" alt="">
       <div><b data-t="instT"></b><span data-t="instS"></span></div>
-      <button id="installBtn" onclick="installApp()" data-t="instB"></button>
+      <button onclick="installApp()" data-t="instB"></button>
     </div>
     <div class="ios hide" id="iosHelp" data-t="ios"></div>
-  </section>
-
+  </div>
   <footer id="foot"></footer>
 </main>
 
 <div class="bar"><div class="in">
-  <div class="err" id="err"></div>
-  <button class="order" onclick="sendOrder()">
-    <span class="lbl"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg><span data-t="order"></span></span>
-    <span class="total" id="total">0</span>
+  <button class="big" id="cartBtn" onclick="openCart()">
+    <span class="l"><span class="count" id="cartCount">0</span><span data-t="viewCart"></span></span>
+    <span class="r" id="cartTotal">0</span>
   </button>
 </div></div>
+
+<div class="shade" id="shade" onclick="closeSheets()"></div>
+
+<!-- item options sheet -->
+<div class="sheet" id="itemSheet" role="dialog" aria-modal="true">
+  <div class="sh-head"><div class="pic" id="isPic" style="width:56px;height:56px;font-size:28px"></div><h3 id="isName"></h3><button class="x" onclick="closeSheets()" aria-label="close">✕</button></div>
+  <div class="sh-body" id="isBody"></div>
+  <div class="sh-foot">
+    <div class="qrow" style="gap:12px">
+      <div class="step"><button onclick="isQty(-1)" aria-label="-">−</button><span id="isQ">1</span><button class="pl" onclick="isQty(1)" aria-label="+">+</button></div>
+      <button class="big" style="flex:1" onclick="addFromSheet()"><span data-t="addCart"></span><span class="r" id="isTotal"></span></button>
+    </div>
+  </div>
+</div>
+
+<!-- cart sheet -->
+<div class="sheet" id="cartSheet" role="dialog" aria-modal="true">
+  <div class="sh-head"><h3 data-t="yourOrder"></h3><button class="x" onclick="closeSheets()" aria-label="close">✕</button></div>
+  <div class="sh-body" id="cartBody"></div>
+  <div class="sh-foot" id="cartFoot">
+    <div class="err" id="err"></div>
+    <button class="big wa" onclick="sendOrder()">
+      <span class="l"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg><span data-t="send"></span></span>
+      <span class="r" id="sendTotal"></span>
+    </button>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
-/* ================= SHOP SETTINGS — change only this block for each new shop ================= */
+/* ======================= SHOP SETTINGS — change only this block for each new shop =======================
+   Prices are in SAR. Each id must be unique. Items with "popular:true" also appear in the Popular tab.
+   spicy:true  → customer picks Spicy or Regular      sauce:true → customer can add extra sauces
+   sizes       → customer picks one size (quarter / half / full ...)
+   includes    → for deals: what's inside, as "itemId:sizeId" or "itemId*2". The "Save X SAR" badge is worked out from these.
+   ========================================================================================================== */
 const SHOP = {
   name_ar: "بروست د. فاروق الحار",
   name_en: "Dr Farooq Spicy Broast",
-  whatsapp: "966500000000",                 // shop WhatsApp, international format, no + or spaces
-  phone: "+966500000000",
-  map: "https://maps.google.com/?q=Riyadh", // paste the shop's Google Maps share link
-  area_ar: "الرياض", area_en: "Riyadh",
-  open: 12, close: 1,                       // opening hours, 24h clock (close after midnight is fine)
-  instagram: "", snapchat: "", tiktok: "",  // optional full links
+  open: 12, close: 1,                        // opening hours, 24h clock (closing after midnight is fine)
+  instagram: "", snapchat: "", tiktok: "",   // optional full links
+
+  // One line per branch. With 2 or more branches, customers choose one and the order goes to that branch's WhatsApp.
+  branches: [
+    { id:"main", ar:"الفرع الرئيسي", en:"Main branch", area_ar:"الرياض", area_en:"Riyadh",
+      whatsapp:"966500000000", phone:"+966500000000", map:"https://maps.google.com/?q=Riyadh" }
+    // ,{ id:"olaya", ar:"فرع العليا", en:"Olaya branch", area_ar:"العليا، الرياض", area_en:"Olaya, Riyadh",
+    //    whatsapp:"966511111111", phone:"+966511111111", map:"https://maps.google.com/?q=Olaya+Riyadh" }
+  ],
+
+  sauces: [
+    { id:"garlic", ar:"صوص ثوم", en:"Garlic sauce", price:2 },
+    { id:"hot",    ar:"صوص حار", en:"Hot sauce",    price:2 },
+    { id:"cheese", ar:"صوص جبن", en:"Cheese sauce", price:3 }
+  ],
+
+  categories: [
+    { id:"deals",  ar:"العروض",  en:"Deals" },
+    { id:"broast", ar:"البروست", en:"Broast" },
+    { id:"sides",  ar:"الإضافات", en:"Sides" },
+    { id:"drinks", ar:"المشروبات", en:"Drinks" }
+  ],
+
   items: [
-    { id:"p4", pieces:4, ar:"٤ قطع", en:"4 Pieces", sub_ar:"وجبة فردية مع البطاطس", sub_en:"Single meal with fries", price:20 },
-    { id:"p8", pieces:8, ar:"٨ قطع", en:"8 Pieces", sub_ar:"وجبة عائلية مع البطاطس", sub_en:"Family meal with fries", price:30, best:true }
+    // ---- Deals ----
+    { id:"solo", cat:"deals", icon:"🍗", ar:"وجبة فردية", en:"Solo Meal", price:18, spicy:true, sauce:true,
+      sub_ar:"ربع بروست + بطاطس + مشروب", sub_en:"Quarter broast + fries + soft drink",
+      includes:["broast:q","fries:r","drink:can"] },
+    { id:"duo", cat:"deals", icon:"🍗", ar:"عرض الاثنين", en:"Deal for 2", price:42, spicy:true, sauce:true, popular:true,
+      sub_ar:"نص بروست + برجر بروست + بطاطس كبير + مشروب ١ لتر", sub_en:"Half broast + broast burger + large fries + 1L drink",
+      includes:["broast:h","burger","fries:l","drink:1l"] },
+    { id:"family", cat:"deals", icon:"🍗", ar:"عرض العائلة", en:"Family Deal", price:62, spicy:true, sauce:true, popular:true,
+      sub_ar:"بروست كامل + ٢ برجر بروست + بطاطس كبير + مشروب ١ لتر", sub_en:"Full broast + 2 broast burgers + large fries + 1L drink",
+      includes:["broast:f","burger*2","fries:l","drink:1l"] },
+
+    // ---- Broast ----
+    { id:"broast", cat:"broast", icon:"🍗", ar:"بروست دجاج", en:"Broasted Chicken", spicy:true, sauce:true, popular:true,
+      sub_ar:"مقرمش من برا وطري من داخل", sub_en:"Crispy outside, juicy inside",
+      sizes:[
+        { id:"q", ar:"ربع", en:"Quarter", sub_ar:"قطعتين + بطاطس + خبز + صوصين", sub_en:"2 pieces + fries, bun & 2 sauces", price:13 },
+        { id:"h", ar:"نص",  en:"Half",    sub_ar:"٤ قطع + بطاطس + خبز + ٢ صوص",   sub_en:"4 pieces + fries, bun & 2 sauces", price:20 },
+        { id:"f", ar:"كامل", en:"Full",   sub_ar:"٨ قطع + بطاطس + ٢ خبز + ٤ صوص", sub_en:"8 pieces + fries, 2 buns & 4 sauces", price:30 }
+      ] },
+    { id:"burger", cat:"broast", icon:"🍔", ar:"برجر بروست", en:"Broast Burger", price:14, spicy:true, sauce:true, popular:true,
+      sub_ar:"صدر بروست مقرمش مع خس وصوص", sub_en:"Crispy broast fillet, lettuce & sauce" },
+    { id:"strips", cat:"broast", icon:"🍗", ar:"ستربس دجاج", en:"Chicken Strips", price:18, spicy:true, sauce:true,
+      sub_ar:"٥ قطع ستربس مع بطاطس", sub_en:"5 strips with fries" },
+    { id:"wings", cat:"broast", icon:"🍗", ar:"أجنحة بروست", en:"Broast Wings", price:16, spicy:true, sauce:true,
+      sub_ar:"٨ أجنحة مقرمشة", sub_en:"8 crispy wings" },
+
+    // ---- Sides ----
+    { id:"fries", cat:"sides", icon:"🍟", ar:"بطاطس", en:"Fries",
+      sizes:[ { id:"r", ar:"عادي", en:"Regular", price:6 }, { id:"l", ar:"كبير", en:"Large", price:9 } ] },
+    { id:"coleslaw", cat:"sides", icon:"🥗", ar:"كول سلو", en:"Coleslaw", price:4 },
+    { id:"hummus",   cat:"sides", icon:"🥣", ar:"حمص", en:"Hummus", price:6 },
+    { id:"bun",      cat:"sides", icon:"🍞", ar:"خبز إضافي", en:"Extra bun", price:1 },
+
+    // ---- Drinks ----
+    { id:"drink", cat:"drinks", icon:"🥤", ar:"مشروب غازي", en:"Soft drink",
+      sizes:[ { id:"can", ar:"علبة", en:"Can", price:3 }, { id:"1l", ar:"١ لتر", en:"1 litre", price:6 } ] },
+    { id:"water", cat:"drinks", icon:"💧", ar:"مويه", en:"Water", price:1 },
+    { id:"juice", cat:"drinks", icon:"🧃", ar:"عصير برتقال", en:"Orange juice", price:5 }
   ]
 };
-/* =========================================================================================== */
+/* ========================================================================================================== */
 
 const T={
- ar:{orderNow:"🍗 اطلب الآن",heroT:"بروست مقرمش\nطازج وساخن",heroS:"اطلب من جوالك عبر واتساب، واستلم خلال دقائق",f1:"طازج يومياً",f2:"جاهز بسرعة",f3:"وجبات عائلية",menuTitle:"المنيو",how:"كيف تبي طلبك؟",pickup:"🏪 استلام",delivery:"🛵 توصيل",name:"الاسم",addr:"الحي / وصف المكان (اختياري)",loc:"📍 أرسل موقعي",locOk:"✅ تم تحديد الموقع",locWait:"⏳ جاري التحديد...",locFail:"تعذر تحديد الموقع — اكتب الحي",pay:"💳 الدفع عند الاستلام — كاش أو مدى",visit:"زورونا",map:"الموقع",call:"اتصل بنا",hoursT:"أوقات العمل",share:"شارك",shareSub:"أرسل الرابط لأصحابك",instT:"ثبّت التطبيق",instS:"اطلب بضغطة من شاشة جوالك",instB:"تثبيت",ios:"على الآيفون: اضغط زر المشاركة ⬆️ في الأسفل ثم «إضافة إلى الشاشة الرئيسية» ➕",order:"اطلب عبر واتساب",sar:"ر.س",save:n=>`وفّر ${n} ر.س`,openNow:"مفتوح الآن",closedNow:"مغلق الآن",errItem:"أضف وجبة أولاً",errMode:"اختر استلام أو توصيل",errLoc:"أرسل موقعك أو اكتب الحي للتوصيل",copied:"تم نسخ الرابط",
-   msg:"السلام عليكم، أبي أطلب:",tot:"المجموع",type:"نوع الطلب",pk:"استلام من المحل",dl:"توصيل",nm:"الاسم",lc:"الموقع",ad:"العنوان",py:"الدفع عند الاستلام",lang:"EN",hrs:(o,c)=>`${fmt(o,'ar')} – ${fmt(c,'ar')}`},
- en:{orderNow:"🍗 Order now",heroT:"Crispy broast,\nfresh and hot",heroS:"Order from your phone on WhatsApp and pick up in minutes",f1:"Fresh daily",f2:"Ready fast",f3:"Family meals",menuTitle:"Menu",how:"How would you like it?",pickup:"🏪 Pickup",delivery:"🛵 Delivery",name:"Your name",addr:"Area / directions (optional)",loc:"📍 Send my location",locOk:"✅ Location added",locWait:"⏳ Getting location...",locFail:"Couldn't get location — type your area",pay:"💳 Pay on pickup — cash or mada",visit:"Visit us",map:"Location",call:"Call us",hoursT:"Opening hours",share:"Share",shareSub:"Send the link to friends",instT:"Install the app",instS:"Order in one tap from your home screen",instB:"Install",ios:"On iPhone: tap the Share button ⬆️ at the bottom, then “Add to Home Screen” ➕",order:"Order on WhatsApp",sar:"SAR",save:n=>`Save ${n} SAR`,openNow:"Open now",closedNow:"Closed now",errItem:"Add a meal first",errMode:"Choose pickup or delivery",errLoc:"Send your location or type your area",copied:"Link copied",
-   msg:"Hello, I'd like to order:",tot:"Total",type:"Order type",pk:"Pickup",dl:"Delivery",nm:"Name",lc:"Location",ad:"Address",py:"Pay on pickup",lang:"عربي",hrs:(o,c)=>`${fmt(o,'en')} – ${fmt(c,'en')}`}
+ ar:{heroT:"بروست حار ومقرمش 🌶",heroS:"عروض يومية — اطلب عبر واتساب واستلم خلال دقائق",popular:"الأكثر طلباً",popularHint:"الأكثر طلباً الآن",bestTag:"🔥 الأكثر طلباً",from:"من",
+   viewCart:"عرض السلة",yourOrder:"طلبك",addCart:"أضف للسلة",added:"تمت الإضافة ✅",size:"اختر الحجم",required:"مطلوب",spiceT:"الطعم",spicy:"🌶 حار",regular:"عادي",sauceT:"صوص إضافي",optional:"اختياري",
+   empty:"السلة فاضية",emptySub:"اختر وجبتك من المنيو",addMore:"+ أضف أصناف أخرى",noteT:"ملاحظة على الطلب",notePh:"مثال: بدون صوص ثوم",branchT:"اختر الفرع",
+   how:"كيف تبي طلبك؟",pickup:"🏪 استلام",delivery:"🛵 توصيل",name:"الاسم",addr:"الحي / وصف المكان (اختياري)",loc:"📍 أرسل موقعي",locOk:"✅ تم تحديد الموقع",locWait:"⏳ جاري التحديد...",locFail:"تعذر تحديد الموقع — اكتب الحي",
+   closedNote:"المحل مغلق الآن — طلبك يوصلنا ونجهزه أول ما نفتح",pay:"💳 الدفع عند الاستلام — كاش أو مدى",send:"أرسل الطلب عبر واتساب",tot:"المجموع",
+   reorderT:"🔁 كرر طلبك الأخير",reorderGo:"اطلب",items:n=>`${n} ${n===1?'صنف':'أصناف'}`,
+   visit:"زورونا",map:"الموقع",call:"اتصل بنا",hoursT:"أوقات العمل",share:"شارك",shareSub:"أرسل الرابط لأصحابك",instT:"ثبّت التطبيق",instS:"اطلب بضغطة من شاشة جوالك",instB:"تثبيت",
+   ios:"على الآيفون: اضغط زر المشاركة ⬆️ في الأسفل ثم «إضافة إلى الشاشة الرئيسية» ➕",sar:"ر.س",save:n=>`وفّر ${n} ر.س`,openNow:"مفتوح الآن",closedNow:"مغلق الآن",
+   errItem:"السلة فاضية — أضف وجبة أولاً",errMode:"اختر استلام أو توصيل",errLoc:"أرسل موقعك أو اكتب الحي للتوصيل",errBranch:"اختر الفرع",copied:"تم نسخ الرابط",
+   msg:"السلام عليكم، أبي أطلب:",br:"الفرع",type:"نوع الطلب",pk:"استلام من المحل",dl:"توصيل",nm:"الاسم",lc:"الموقع",ad:"العنوان",nt:"ملاحظة",py:"الدفع عند الاستلام",lang:"EN",
+   hrs:(o,c)=>`${fmt(o,'ar')} – ${fmt(c,'ar')}`},
+ en:{heroT:"Spicy, crispy broast 🌶",heroS:"Daily deals — order on WhatsApp and pick up in minutes",popular:"Popular",popularHint:"Most ordered right now",bestTag:"🔥 Most ordered",from:"from",
+   viewCart:"View cart",yourOrder:"Your order",addCart:"Add to cart",added:"Added ✅",size:"Choose a size",required:"Required",spiceT:"Taste",spicy:"🌶 Spicy",regular:"Regular",sauceT:"Extra sauce",optional:"Optional",
+   empty:"Your cart is empty",emptySub:"Pick a meal from the menu",addMore:"+ Add more items",noteT:"Note for the shop",notePh:"e.g. no garlic sauce",branchT:"Choose a branch",
+   how:"How would you like it?",pickup:"🏪 Pickup",delivery:"🛵 Delivery",name:"Your name",addr:"Area / directions (optional)",loc:"📍 Send my location",locOk:"✅ Location added",locWait:"⏳ Getting location...",locFail:"Couldn't get location — type your area",
+   closedNote:"We're closed right now — we'll prepare your order as soon as we open",pay:"💳 Pay on pickup — cash or mada",send:"Send order on WhatsApp",tot:"Total",
+   reorderT:"🔁 Reorder your last order",reorderGo:"Order",items:n=>`${n} item${n===1?'':'s'}`,
+   visit:"Visit us",map:"Location",call:"Call us",hoursT:"Opening hours",share:"Share",shareSub:"Send the link to friends",instT:"Install the app",instS:"Order in one tap from your home screen",instB:"Install",
+   ios:"On iPhone: tap the Share button ⬆️ at the bottom, then “Add to Home Screen” ➕",sar:"SAR",save:n=>`Save ${n} SAR`,openNow:"Open now",closedNow:"Closed now",
+   errItem:"Your cart is empty — add a meal first",errMode:"Choose pickup or delivery",errLoc:"Send your location or type your area",errBranch:"Choose a branch",copied:"Link copied",
+   msg:"Hello, I'd like to order:",br:"Branch",type:"Order type",pk:"Pickup",dl:"Delivery",nm:"Name",lc:"Location",ad:"Address",nt:"Note",py:"Pay on pickup",lang:"عربي",
+   hrs:(o,c)=>`${fmt(o,'en')} – ${fmt(c,'en')}`}
 };
-function fmt(h,l){const ap=h<12?(l==='ar'?'ص':'am'):(l==='ar'?'م':'pm');const x=h%12||12;return x+' '+ap}
-let lang="ar",mode="",loc="",qty={};
-SHOP.items.forEach(i=>qty[i.id]=0);
-const $=id=>document.getElementById(id);
-const drum=`<svg width="54" height="54" viewBox="0 0 64 64"><path d="M40 6c10 0 18 8 18 18 0 9-6 16-14 18l-8 2-10 10c1 3 0 6-3 7-2 1-5 0-6-2-2 1-5 0-6-2-1-3 0-5 3-6l10-10 2-8c2-8 9-15 14-15z" fill="#D9822B"/><path d="M44 12c5 1 9 5 9 11" stroke="#FCD9A0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M26 30l-3 9M33 26l-2 7" stroke="#A85A16" stroke-width="2" stroke-linecap="round"/></svg>`;
 
+/* ---------- helpers ---------- */
+const $=id=>document.getElementById(id);
+const L=(o,k)=>o[k+'_'+lang]!==undefined?o[k+'_'+lang]:o[lang];      // localized field
+const NAME=o=>o[lang];
+const byId={};SHOP.items.forEach(i=>byId[i.id]=i);
+const sauceById={};SHOP.sauces.forEach(s=>sauceById[s.id]=s);
+const store={get(k,d){try{const v=localStorage.getItem('dfb_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('dfb_'+k,JSON.stringify(v))}catch(e){}}};
+function fmt(h,l){const ap=h<12?(l==='ar'?'ص':'am'):(l==='ar'?'م':'pm');return (h%12||12)+' '+ap}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function isOpen(){const h=new Date().getHours(),o=SHOP.open,c=SHOP.close;return o<c?(h>=o&&h<c):(h>=o||h<c)}
-function render(){
-  const t=T[lang],base=SHOP.items[0],perPiece=base.price/base.pieces;
-  $('items').innerHTML=SHOP.items.map(i=>{
-    const saving=i.best?Math.round(perPiece*i.pieces-i.price):0;
-    return `<div class="card ${i.best?'best':''}">${saving>0?`<span class="badge">${t.save(saving)}</span>`:''}
-      <div class="pic">${drum}</div>
-      <div class="info"><h3>${i[lang]}</h3><div class="sub">${i['sub_'+lang]}</div><div class="price">${i.price} ${t.sar}</div></div>
-      <div class="qty"><button class="plus" onclick="chg('${i.id}',1)" aria-label="+">+</button><span id="q-${i.id}">${qty[i.id]}</span><button class="minus" onclick="chg('${i.id}',-1)" aria-label="-">−</button></div></div>`}).join('');
-  document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);
-  document.querySelectorAll('[data-p]').forEach(e=>e.placeholder=t[e.dataset.p]);
-  if(loc)$('locBtn').textContent=t.locOk;
-  $('shopName').textContent=SHOP['name_'+lang];
-  $('heroTitle').innerHTML=t.heroT.replace('\n','<br>');
-  $('heroSub').textContent=t.heroS;
-  const op=isOpen();$('openTxt').textContent=op?t.openNow:t.closedNow;$('dot').classList.toggle('closed',!op);
-  $('hoursTxt').textContent=t.hrs(SHOP.open,SHOP.close);
-  $('areaTxt').textContent=SHOP['area_'+lang];
-  $('phoneTxt').textContent=SHOP.phone;
-  $('langBtn').textContent=t.lang;
-  $('social').innerHTML=[['instagram','Instagram'],['snapchat','Snapchat'],['tiktok','TikTok']].filter(s=>SHOP[s[0]]).map(s=>`<a href="${SHOP[s[0]]}" target="_blank" rel="noopener">${s[1]}</a>`).join('');
-  document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-  document.title=SHOP['name_'+lang];
-  $('foot').textContent=SHOP['name_'+lang]+' © '+new Date().getFullYear();
-  total();
+function priceOf(item,sizeId){if(item.sizes){const s=item.sizes.find(x=>x.id===sizeId)||item.sizes[0];return s.price}return item.price}
+function fromPrice(item){return item.sizes?Math.min(...item.sizes.map(s=>s.price)):item.price}
+function dealWorth(item){if(!item.includes)return 0;return item.includes.reduce((sum,str)=>{const m=str.match(/^([\w-]+)(?::([\w-]+))?(?:\*(\d+))?$/);if(!m||!byId[m[1]])return sum;return sum+priceOf(byId[m[1]],m[2])*(+m[3]||1)},0)}
+const drum=s=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64"><path d="M40 6c10 0 18 8 18 18 0 9-6 16-14 18l-8 2-10 10c1 3 0 6-3 7-2 1-5 0-6-2-2 1-5 0-6-2-1-3 0-5 3-6l10-10 2-8c2-8 9-15 14-15z" fill="#D9822B"/><path d="M44 12c5 1 9 5 9 11" stroke="#FCD9A0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M26 30l-3 9M33 26l-2 7" stroke="#A85A16" stroke-width="2" stroke-linecap="round"/></svg>`;
+const iconOf=(i,s)=>i.icon==='🍗'||!i.icon?drum(s):i.icon;
+
+/* ---------- state ---------- */
+let lang=store.get('lang','ar'), cart=store.get('cart',[]), mode=store.get('mode',''), branch=store.get('branch',SHOP.branches.length===1?SHOP.branches[0].id:''), loc='';
+let note='', sel=null;   // sel = item being configured in the sheet
+if(!SHOP.branches.some(b=>b.id===branch))branch=SHOP.branches.length===1?SHOP.branches[0].id:'';
+cart=cleanCart(cart);
+function cleanCart(c){return (c||[]).filter(l=>byId[l.id]&&(!byId[l.id].sizes||byId[l.id].sizes.some(s=>s.id===l.size))).map(l=>({...l,sauces:(l.sauces||[]).filter(s=>sauceById[s])}))}
+function lineKey(l){return [l.id,l.size||'',l.spicy===null?'':l.spicy?'s':'r',(l.sauces||[]).slice().sort().join('+')].join('|')}
+function unitPrice(l){return priceOf(byId[l.id],l.size)+(l.sauces||[]).reduce((s,id)=>s+sauceById[id].price,0)}
+function cartSum(){return cart.reduce((s,l)=>s+unitPrice(l)*l.qty,0)}
+function cartCount(){return cart.reduce((s,l)=>s+l.qty,0)}
+function saveCart(){store.set('cart',cart)}
+function curBranch(){return SHOP.branches.find(b=>b.id===branch)||SHOP.branches[0]}
+
+/* ---------- menu ---------- */
+function cardHTML(i,inPopular){
+  const t=T[lang],worth=dealWorth(i),save=worth>i.price?worth-i.price:0,n=cart.filter(l=>l.id===i.id).reduce((s,l)=>s+l.qty,0);
+  const badge=save>0?`<span class="badge">${t.save(save)}</span>`:(inPopular&&i.popular?`<span class="badge hot">${t.bestTag}</span>`:'');
+  const pr=i.sizes?`<span style="font-size:13px;font-weight:600">${t.from}</span> ${fromPrice(i)} ${t.sar}`:`${i.price} ${t.sar}${save>0?`<s>${worth}</s>`:''}`;
+  return `<div class="card ${save>0?'deal':''}" onclick="openItem('${i.id}')" role="button" tabindex="0">${badge}
+    <div class="pic">${iconOf(i,46)}${n?`<span class="incart">${n}</span>`:''}</div>
+    <div class="info"><h3>${NAME(i)}</h3>${L(i,'sub')?`<div class="sub">${L(i,'sub')}</div>`:''}
+      <div class="price">${pr}</div>${i.spicy?`<div class="chili">🌶 ${t.spicy.replace('🌶 ','')} / ${t.regular}</div>`:''}</div>
+    <button class="add" onclick="event.stopPropagation();quickAdd('${i.id}')" aria-label="+">+</button></div>`;
 }
-function chg(id,d){qty[id]=Math.max(0,Math.min(50,qty[id]+d));$('q-'+id).textContent=qty[id];total();clearErr();if(navigator.vibrate)try{navigator.vibrate(10)}catch(e){}}
-function sum(){return SHOP.items.reduce((s,i)=>s+qty[i.id]*i.price,0)}
-function total(){$('total').textContent=sum()+' '+T[lang].sar}
-function setMode(m){mode=m;['pickup','delivery'].forEach(x=>$('m-'+x).classList.toggle('on',x===m));$('deliveryBox').classList.toggle('hide',m!=='delivery');clearErr()}
-function getLoc(){const b=$('locBtn'),t=T[lang];if(!navigator.geolocation){showErr(t.locFail);return}b.textContent=t.locWait;
-  navigator.geolocation.getCurrentPosition(p=>{loc=`https://maps.google.com/?q=${p.coords.latitude.toFixed(6)},${p.coords.longitude.toFixed(6)}`;b.textContent=t.locOk;b.classList.add('ok');clearErr()},()=>{b.textContent=t.loc;showErr(t.locFail)},{enableHighAccuracy:true,timeout:10000})}
-function showErr(m){$('err').textContent=m;document.getElementById('menu').scrollIntoView({behavior:'smooth'})}
+function renderMenu(){
+  const t=T[lang],cats=[...SHOP.categories];
+  const pop=SHOP.items.filter(i=>i.popular);
+  if(pop.length)cats.splice(SHOP.categories[0]&&SHOP.categories[0].id==='deals'?1:0,0,{id:'popular',ar:t.popular,en:t.popular,_pop:true});
+  const shown=cats.filter(c=>c._pop||SHOP.items.some(i=>i.cat===c.id));
+  $('tabs').innerHTML=shown.map(c=>`<button class="tab" data-c="${c.id}" onclick="goCat('${c.id}')">${c._pop?t.popular:NAME(c)}</button>`).join('');
+  $('menu').innerHTML=shown.map(c=>{const list=c._pop?pop:SHOP.items.filter(i=>i.cat===c.id);
+    return `<section class="cat" id="cat-${c.id}"><h2>${c._pop?t.popular:NAME(c)}</h2>${c._pop?`<div class="hint">${t.popularHint}</div>`:'<div style="height:8px"></div>'}${list.map(i=>cardHTML(i,c._pop)).join('')}</section>`}).join('');
+  spy();
+}
+function goCat(id){const el=$('cat-'+id);if(el)el.scrollIntoView({behavior:'smooth'});setTab(id)}
+function setTab(id){document.querySelectorAll('.tab').forEach(b=>{const on=b.dataset.c===id;b.classList.toggle('on',on);if(on)b.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})})}
+let spyObs=null;
+function spy(){if(!('IntersectionObserver' in window))return;if(spyObs)spyObs.disconnect();
+  spyObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setTab(e.target.id.slice(4))})},{rootMargin:'-130px 0px -65% 0px'});
+  document.querySelectorAll('.cat').forEach(s=>spyObs.observe(s));
+  const first=document.querySelector('.tab');if(first)first.classList.add('on');}
+
+/* ---------- item sheet ---------- */
+function needsSheet(i){return !!(i.sizes||i.spicy||i.sauce)}
+function quickAdd(id){const i=byId[id];if(needsSheet(i))return openItem(id);addLine({id,size:null,spicy:null,sauces:[],qty:1})}
+function openItem(id){
+  const i=byId[id];if(!needsSheet(i)){return quickAdd(id)}
+  sel={id,size:i.sizes?i.sizes[0].id:null,spicy:i.spicy?true:null,sauces:[],qty:1};
+  drawItem();openSheet('itemSheet');
+}
+function drawItem(){
+  const i=byId[sel.id],t=T[lang];
+  $('isPic').innerHTML=iconOf(i,36);$('isName').textContent=NAME(i);
+  let h='';
+  if(L(i,'sub'))h+=`<p class="sub" style="font-size:14px;color:var(--soft);margin:-4px 0 12px">${L(i,'sub')}</p>`;
+  if(i.sizes)h+=`<div class="grp"><h4>${t.size}<small>${t.required}</small></h4>${i.sizes.map(s=>`<button class="opt ${sel.size===s.id?'on':''}" onclick="sel.size='${s.id}';drawItem()"><span class="mk"></span><span class="t"><b>${NAME(s)}</b>${L(s,'sub')?`<span>${L(s,'sub')}</span>`:''}</span><span class="p">${s.price} ${t.sar}</span></button>`).join('')}</div>`;
+  if(i.spicy)h+=`<div class="grp"><h4>${t.spiceT}<small>${t.required}</small></h4><div class="seg"><button class="segb ${sel.spicy?'on':''}" onclick="sel.spicy=true;drawItem()">${t.spicy}</button><button class="segb ${sel.spicy===false?'on':''}" onclick="sel.spicy=false;drawItem()">${t.regular}</button></div></div>`;
+  if(i.sauce)h+=`<div class="grp"><h4>${t.sauceT}<small>${t.optional}</small></h4>${SHOP.sauces.map(s=>`<button class="opt chk ${sel.sauces.includes(s.id)?'on':''}" onclick="togSauce('${s.id}')"><span class="mk"></span><span class="t"><b>${NAME(s)}</b></span><span class="p">+${s.price} ${t.sar}</span></button>`).join('')}</div>`;
+  $('isBody').innerHTML=h;$('isQ').textContent=sel.qty;$('isTotal').textContent=unitPrice(sel)*sel.qty+' '+t.sar;
+}
+function togSauce(id){const k=sel.sauces.indexOf(id);if(k>-1)sel.sauces.splice(k,1);else sel.sauces.push(id);drawItem()}
+function isQty(d){sel.qty=Math.max(1,Math.min(50,sel.qty+d));drawItem()}
+function addFromSheet(){addLine({...sel,sauces:[...sel.sauces]});closeSheets()}
+function addLine(l){const k=lineKey(l),ex=cart.find(x=>lineKey(x)===k);if(ex)ex.qty=Math.min(50,ex.qty+l.qty);else cart.push(l);saveCart();refresh();toast(T[lang].added);buzz()}
+function buzz(){if(navigator.vibrate)try{navigator.vibrate(10)}catch(e){}}
+
+/* ---------- cart ---------- */
+function lineDesc(l){const i=byId[l.id],t=T[lang],p=[];if(i.sizes)p.push(NAME(i.sizes.find(s=>s.id===l.size)));if(l.spicy!==null&&l.spicy!==undefined)p.push(l.spicy?t.spicy.replace('🌶 ',''):t.regular);(l.sauces||[]).forEach(s=>p.push('+ '+NAME(sauceById[s])));return p.join(' · ')}
+function openCart(){drawCart();openSheet('cartSheet')}
+function drawCart(){
+  const t=T[lang];
+  if(!cart.length){$('cartBody').innerHTML=`<div class="empty"><div>🛒</div><b>${t.empty}</b><p>${t.emptySub}</p></div><button class="more" onclick="closeSheets()">${t.addMore}</button>`;$('cartFoot').classList.add('hide');return}
+  $('cartFoot').classList.remove('hide');
+  let h=`<div class="grp">${cart.map((l,n)=>`<div class="line"><div class="pic" style="width:48px;height:48px;font-size:24px;border-radius:12px">${iconOf(byId[l.id],32)}</div><div class="t"><b>${NAME(byId[l.id])}</b>${lineDesc(l)?`<span>${lineDesc(l)}</span>`:''}<i>${unitPrice(l)*l.qty} ${t.sar}</i></div><div class="step"><button onclick="lineQty(${n},-1)" aria-label="-">−</button><span>${l.qty}</span><button class="pl" onclick="lineQty(${n},1)" aria-label="+">+</button></div></div>`).join('')}
+    <button class="more" onclick="closeSheets()">${t.addMore}</button></div>`;
+  h+=`<div class="grp"><h4>${t.noteT}<small>${t.optional}</small></h4><textarea id="note" rows="2" placeholder="${esc(t.notePh)}" oninput="note=this.value">${esc(note)}</textarea></div>`;
+  if(SHOP.branches.length>1)h+=`<div class="grp"><h4>${t.branchT}</h4><div class="branches">${SHOP.branches.map(b=>`<button class="segb ${branch===b.id?'on':''}" onclick="setBranch('${b.id}')">${NAME(b)}<br><small style="font-weight:600;color:var(--soft)">${L(b,'area')}</small></button>`).join('')}</div></div>`;
+  h+=`<div class="grp"><h4>${t.how}</h4><div class="seg"><button class="segb ${mode==='pickup'?'on':''}" onclick="setMode('pickup')">${t.pickup}</button><button class="segb ${mode==='delivery'?'on':''}" onclick="setMode('delivery')">${t.delivery}</button></div>
+    <input id="name" placeholder="${esc(t.name)}" autocomplete="name" value="${esc(store.get('name',''))}" oninput="store.set('name',this.value)">
+    ${mode==='delivery'?`<button class="loc ${loc?'ok':''}" id="locBtn" onclick="getLoc()">${loc?t.locOk:t.loc}</button><input id="addr" placeholder="${esc(t.addr)}" value="${esc(store.get('addr',''))}" oninput="store.set('addr',this.value)">`:''}</div>`;
+  if(!isOpen())h+=`<div class="notice">${t.closedNote}</div>`;
+  h+=`<div class="grp"><div class="sumrow tot" style="border:0;margin:0;padding:0"><span>${t.tot}</span><span>${cartSum()} ${t.sar}</span></div></div><p class="pay">${t.pay}</p>`;
+  $('cartBody').innerHTML=h;$('sendTotal').textContent=cartSum()+' '+t.sar;
+}
+function lineQty(n,d){cart[n].qty+=d;if(cart[n].qty<=0)cart.splice(n,1);saveCart();refresh();drawCart();buzz()}
+function setMode(m){mode=m;store.set('mode',m);clearErr();drawCart()}
+function setBranch(id){branch=id;store.set('branch',id);clearErr();drawCart();drawVisit()}
+function getLoc(){const t=T[lang],b=$('locBtn');if(!navigator.geolocation){showErr(t.locFail);return}b.textContent=t.locWait;
+  navigator.geolocation.getCurrentPosition(p=>{loc=`https://maps.google.com/?q=${p.coords.latitude.toFixed(6)},${p.coords.longitude.toFixed(6)}`;clearErr();drawCart()},()=>{b.textContent=t.loc;showErr(t.locFail)},{enableHighAccuracy:true,timeout:10000})}
+function showErr(m){$('err').textContent=m}
 function clearErr(){$('err').textContent=''}
-function toast(m){const x=$('toast');x.textContent=m;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
+
+/* ---------- send ---------- */
 function sendOrder(){
-  const t=T[lang],addr=$('addr').value.trim(),name=$('name').value.trim();
-  if(sum()===0)return showErr(t.errItem);
+  const t=T[lang],name=($('name')||{}).value?.trim()||'',addr=($('addr')||{}).value?.trim()||'';
+  if(!cart.length)return showErr(t.errItem);
+  if(SHOP.branches.length>1&&!branch)return showErr(t.errBranch);
   if(!mode)return showErr(t.errMode);
   if(mode==='delivery'&&!loc&&!addr)return showErr(t.errLoc);
-  try{localStorage.setItem('cs_name',name)}catch(e){}
+  const b=curBranch();
   let m=t.msg+"\n\n";
-  SHOP.items.forEach(i=>{if(qty[i.id])m+=`• ${qty[i.id]} × ${i[lang]} = ${qty[i.id]*i.price} ${t.sar}\n`});
-  m+=`\n*${t.tot}: ${sum()} ${t.sar}*\n${t.type}: ${mode==='pickup'?t.pk:t.dl}\n`;
+  cart.forEach(l=>{const d=lineDesc(l);m+=`• ${l.qty} × ${NAME(byId[l.id])}${d?` (${d})`:''} = ${unitPrice(l)*l.qty} ${t.sar}\n`});
+  m+=`\n*${t.tot}: ${cartSum()} ${t.sar}*\n`;
+  if(SHOP.branches.length>1)m+=`${t.br}: ${NAME(b)}\n`;
+  m+=`${t.type}: ${mode==='pickup'?t.pk:t.dl}\n`;
   if(name)m+=`${t.nm}: ${name}\n`;
   if(mode==='delivery'){if(loc)m+=`${t.lc}: ${loc}\n`;if(addr)m+=`${t.ad}: ${addr}\n`}
+  if(note.trim())m+=`${t.nt}: ${note.trim()}\n`;
   m+=t.py;
-  const a=document.createElement('a');a.href=`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(m)}`;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  store.set('last',{cart:cart.map(l=>({...l})),at:Date.now()});
+  const a=document.createElement('a');a.href=`https://wa.me/${b.whatsapp}?text=${encodeURIComponent(m)}`;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  cart=[];note='';saveCart();refresh();closeSheets();
 }
-function toggleLang(){lang=lang==='ar'?'en':'ar';try{localStorage.setItem('cs_lang',lang)}catch(e){}render()}
+
+/* ---------- reorder ---------- */
+function drawReorder(){
+  const last=store.get('last',null),t=T[lang],el=$('reorder');
+  const lines=last?cleanCart(last.cart):[];
+  if(!lines.length){el.classList.add('hide');return}
+  const n=lines.reduce((s,l)=>s+l.qty,0),sum=lines.reduce((s,l)=>s+unitPrice(l)*l.qty,0);
+  el.innerHTML=`<span class="ic">🔁</span><span><b>${t.reorderT.replace('🔁 ','')}</b><span>${t.items(n)} · ${sum} ${t.sar}</span></span><span class="go">${t.reorderGo}</span>`;
+  el.classList.remove('hide');
+}
+function reorder(){const last=store.get('last',null);if(!last)return;cart=cleanCart(last.cart).map(l=>({...l}));saveCart();refresh();openCart()}
+
+/* ---------- sheets ---------- */
+let openId=null;
+function openSheet(id){if(openId)$(openId).classList.remove('on');openId=id;$(id).classList.add('on');$('shade').classList.add('on');document.body.classList.add('lock');if(!history.state||!history.state.sheet)history.pushState({sheet:1},'')}
+function closeSheets(fromPop){if(!openId)return;$(openId).classList.remove('on');openId=null;$('shade').classList.remove('on');document.body.classList.remove('lock');clearErr();if(!fromPop&&history.state&&history.state.sheet)history.back()}
+window.addEventListener('popstate',()=>closeSheets(true));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheets()});
+
+/* ---------- page ---------- */
+function drawVisit(){const b=curBranch();$('mapLink').href=b.map;$('callLink').href='tel:'+b.phone;$('areaTxt').textContent=L(b,'area');$('phoneTxt').textContent=b.phone}
+function refresh(){
+  const t=T[lang];$('cartCount').textContent=cartCount();$('cartTotal').textContent=cartSum()+' '+t.sar;
+  renderMenu();drawReorder();
+}
+function render(){
+  const t=T[lang];
+  document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);
+  $('shopName').textContent=NAME({ar:SHOP.name_ar,en:SHOP.name_en});document.title=SHOP['name_'+lang];
+  $('heroTitle').textContent=t.heroT;$('heroSub').textContent=t.heroS;$('heroArt').innerHTML=drum(64);
+  const op=isOpen();$('openTxt').textContent=op?t.openNow:t.closedNow;$('dot').classList.toggle('closed',!op);
+  $('hoursTxt').textContent=t.hrs(SHOP.open,SHOP.close);$('langBtn').textContent=t.lang;
+  $('social').innerHTML=[['instagram','Instagram'],['snapchat','Snapchat'],['tiktok','TikTok']].filter(s=>SHOP[s[0]]).map(s=>`<a href="${esc(SHOP[s[0]])}" target="_blank" rel="noopener">${s[1]}</a>`).join('');
+  $('foot').textContent=SHOP['name_'+lang]+' © '+new Date().getFullYear();
+  drawVisit();refresh();
+  if(openId==='cartSheet')drawCart();if(openId==='itemSheet')drawItem();
+}
+function toggleLang(){lang=lang==='ar'?'en':'ar';store.set('lang',lang);render()}
+function toast(m){const x=$('toast');x.textContent=m;x.classList.add('show');clearTimeout(x._t);x._t=setTimeout(()=>x.classList.remove('show'),1500)}
 function share(){const u=location.href.split('#')[0];if(navigator.share)navigator.share({title:SHOP['name_'+lang],url:u}).catch(()=>{});else{try{navigator.clipboard.writeText(u);toast(T[lang].copied)}catch(e){}}}
 
-/* install as app */
+/* ---------- install as app ---------- */
 let deferred=null;
 const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
-const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
 if(standalone)$('installSec').classList.add('hide');
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e});
-function installApp(){
-  if(deferred){deferred.prompt();deferred.userChoice.finally(()=>{deferred=null})}
-  else $('iosHelp').classList.remove('hide');
-}
-if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+function installApp(){if(deferred){deferred.prompt();deferred.userChoice.finally(()=>{deferred=null})}else $('iosHelp').classList.remove('hide')}
+if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=>{});
 
-$('mapLink').href=SHOP.map;$('callLink').href='tel:'+SHOP.phone;
-try{const s=localStorage.getItem('cs_lang');if(s)lang=s;const n=localStorage.getItem('cs_name');if(n)$('name').value=n}catch(e){}
 render();
 </script>
 </body>

@@ -1,6 +1,6 @@
 # بروست د. فاروق الحار | Dr Farooq Spicy Broast
 
-A one-page website for a broast chicken shop, which customers can also install as an app. Customers browse the menu, then send their order to the shop on WhatsApp. No server, database or monthly fees are needed: it runs free on GitHub Pages.
+A free ordering website for a broast shop, which customers can also install as an app. Customers choose meals, pick options, review their cart, and send the finished order to the shop on WhatsApp. No server, app store, database or monthly fees are needed: it runs free on GitHub Pages.
 
 **Live site:** https://drfarooqai.github.io/chickenspot/
 
@@ -8,15 +8,39 @@ A one-page website for a broast chicken shop, which customers can also install a
 
 ## What customers get
 
-- **Menu with prices.** They tap + and − to choose quantities, and the total updates as they go.
-- **Order on WhatsApp.** The order button opens WhatsApp with the full order already written, including items, total, pickup or delivery, their name, and their location or address. Payment is on pickup or delivery.
-- **Open / Closed badge.** It changes on its own based on the shop's hours.
-- **Quick buttons.** Directions in Google Maps, call the shop, opening hours, and share the page with friends.
-- **Social links.** Instagram, Snapchat and TikTok buttons appear only if the shop has them.
-- **Arabic and English.** Arabic is the default, and one tap switches to English.
-- **Installable app.** On Android, the **Install** button adds it to the home screen straight away. On iPhone, it shows how to use Share → **Add to Home Screen**. It then opens full-screen with the shop's own icon.
-- **Remembers them.** Their name and language are saved for the next order.
-- **Works offline.** After the first visit, the page still opens without internet. Sending the order still needs WhatsApp to be online.
+- **Sticky menu tabs.** Deals, Popular, Broast, Sides and Drinks stay at the top while scrolling. The active tab lights up on its own.
+- **Deal cards with savings.** Each deal shows a **"Save X SAR"** badge and the crossed-out normal price, worked out automatically from what's inside the deal.
+- **Popular tab.** It shows the most-ordered items, marked "🔥 Most ordered".
+- **Options pop-up.** Tapping an item opens a sheet where customers choose:
+  - the size, such as quarter, half or full broast, with what comes with each
+  - **Spicy 🌶 or Regular**
+  - extra sauces, such as garlic, hot or cheese, with prices added
+  - the quantity, with a live total
+- **A proper cart.** Customers review the order, change quantities, remove items, and add a note such as "no garlic sauce".
+- **Branch picker.** It appears only when the shop has 2 or more branches. Each branch gets orders on its own WhatsApp.
+- **Pickup or delivery.** For delivery, customers send their GPS location or type their area.
+- **Reorder in one tap.** After the first order, a "🔁 Reorder your last order" button appears at the top.
+- **Remembers them.** The cart, name, address, language and branch are kept, even if they close the app.
+- **Open / Closed badge.** If the shop is closed, the cart tells customers the order will be prepared at opening time.
+- **Arabic and English.** One tap switches the whole site.
+- **Installable app.** On Android, the **Install** button adds it to the home screen. On iPhone, customers use Share → **Add to Home Screen**.
+- **Works offline.** After the first visit, the menu opens without internet. Sending the order needs WhatsApp to be online.
+
+### What the shop receives on WhatsApp
+
+```
+السلام عليكم، أبي أطلب:
+
+• 2 × بروست دجاج (نص · عادي · + صوص ثوم) = 44 ر.س
+• 1 × عرض العائلة (حار) = 62 ر.س
+
+*المجموع: 106 ر.س*
+نوع الطلب: توصيل
+الاسم: محمد
+الموقع: https://maps.google.com/?q=24.69,46.68
+ملاحظة: بدون صوص ثوم
+الدفع عند الاستلام
+```
 
 ---
 
@@ -24,55 +48,104 @@ A one-page website for a broast chicken shop, which customers can also install a
 
 | File | What it does |
 |---|---|
-| `index.html` | The whole website: design, menu, ordering and the **SHOP SETTINGS** block |
+| `index.html` | The whole website, including the **SHOP SETTINGS** block with the menu |
 | `manifest.webmanifest` | The app's install details: name, colours and icons |
-| `sw.js` | The offline helper, which keeps a copy of the page on the phone |
+| `sw.js` | The offline helper |
 | `icon-192.png`, `icon-512.png` | App icons for Android and the install screen |
-| `apple-touch-icon.png` | App icon for iPhone home screens |
+| `apple-touch-icon.png` | App icon for iPhone |
 
 ---
 
-## How to change the shop details
+## How to change the shop and menu
 
-Open `index.html` and find the block marked **SHOP SETTINGS**. It's near the bottom of the file. **Change only this block.** Everything else stays the same.
+Open `index.html` and find the block marked **SHOP SETTINGS** near the bottom. **Change only this block.** A full new menu takes about 10 minutes.
+
+### Shop details
 
 ```js
-const SHOP = {
-  name_ar: "بروست د. فاروق الحار",
-  name_en: "Dr Farooq Spicy Broast",
-  whatsapp: "966500000000",                 // shop WhatsApp, international format, no + or spaces
-  phone: "+966500000000",
-  map: "https://maps.google.com/?q=Riyadh", // paste the shop's Google Maps share link
-  area_ar: "الرياض", area_en: "Riyadh",
-  open: 12, close: 1,                       // opening hours, 24h clock (close after midnight is fine)
-  instagram: "", snapchat: "", tiktok: "",  // optional full links
-  items: [
-    { id:"p4", pieces:4, ar:"٤ قطع", en:"4 Pieces", sub_ar:"وجبة فردية مع البطاطس", sub_en:"Single meal with fries", price:20 },
-    { id:"p8", pieces:8, ar:"٨ قطع", en:"8 Pieces", sub_ar:"وجبة عائلية مع البطاطس", sub_en:"Family meal with fries", price:30, best:true }
-  ]
-};
+name_ar: "بروست د. فاروق الحار",
+name_en: "Dr Farooq Spicy Broast",
+open: 12, close: 1,                        // 24h clock: 12 = noon, 1 = 1 AM
+instagram: "", snapchat: "", tiktok: "",   // full links, or "" to hide
 ```
 
-| Setting | How to fill it |
+### Branches
+
+```js
+branches: [
+  { id:"main", ar:"الفرع الرئيسي", en:"Main branch", area_ar:"الرياض", area_en:"Riyadh",
+    whatsapp:"966500000000", phone:"+966500000000", map:"https://maps.google.com/?q=Riyadh" }
+]
+```
+
+| Field | How to fill it |
 |---|---|
-| `name_ar`, `name_en` | Shop name in Arabic and English |
-| `whatsapp` | WhatsApp number where orders arrive, e.g. `966512345678`. Start with 966 and drop the leading 0, with no `+` and no spaces |
+| `whatsapp` | The number where orders arrive, e.g. `966512345678`. Start with 966 and drop the leading 0, with no `+` and no spaces |
 | `phone` | Number for the Call button, e.g. `+966512345678` |
 | `map` | In Google Maps, open the shop, tap **Share**, copy the link and paste it here |
-| `area_ar`, `area_en` | District or city shown under the name |
-| `open`, `close` | Hours on a 24-hour clock. `12` means noon and `1` means 1 AM. A closing time after midnight works |
-| `instagram`, `snapchat`, `tiktok` | Full profile links. Leave `""` to hide the button |
-| `items` | One line per menu item. `price` is in riyals. Add `best:true` to show the "Best seller" tag on one item. Each `id` must be different |
 
-**To add a menu item,** copy an item line, put a comma after the line before it, and change the `id`, names, description and price.
+**To add a branch,** copy the branch line, put a comma between the lines, and give it a new `id`. A commented example is already in the file. With 2 or more branches, the branch picker appears in the cart on its own.
 
-### Changing the app name or colours
+### Sauces and categories
 
-The installed app's name and colours are set in `manifest.webmanifest`. Update `name` and `short_name` there to match the shop. `short_name` is the label under the home-screen icon, so keep it short.
+```js
+sauces: [ { id:"garlic", ar:"صوص ثوم", en:"Garlic sauce", price:2 }, ... ],
+categories: [ { id:"deals", ar:"العروض", en:"Deals" }, { id:"broast", ... }, ... ]
+```
 
-### Changing the icon
+The **Popular** tab is made automatically. You don't add it to `categories`. A category with no items is hidden.
 
-Replace the three PNG files with the new shop's logo. **Keep the same file names and sizes:** 192×192, 512×512 and 180×180 for `apple-touch-icon.png`. Use a square image with the logo in the middle and some space around it.
+### Menu items: the 3 kinds
+
+**1. A simple item** has one price and no options. The + button adds it straight to the cart.
+
+```js
+{ id:"coleslaw", cat:"sides", icon:"🥗", ar:"كول سلو", en:"Coleslaw", price:4 }
+```
+
+**2. An item with sizes and options:**
+
+```js
+{ id:"broast", cat:"broast", icon:"🍗", ar:"بروست دجاج", en:"Broasted Chicken",
+  spicy:true, sauce:true, popular:true,
+  sub_ar:"مقرمش من برا وطري من داخل", sub_en:"Crispy outside, juicy inside",
+  sizes:[
+    { id:"q", ar:"ربع", en:"Quarter", sub_ar:"قطعتين + بطاطس + خبز + صوصين", sub_en:"2 pieces + fries, bun & 2 sauces", price:13 },
+    { id:"h", ar:"نص",  en:"Half",    price:20 },
+    { id:"f", ar:"كامل", en:"Full",   price:30 }
+  ] }
+```
+
+**3. A deal** lists what's inside under `includes`. The site adds up those normal prices and shows the saving.
+
+```js
+{ id:"family", cat:"deals", icon:"🍗", ar:"عرض العائلة", en:"Family Deal", price:62,
+  spicy:true, sauce:true, popular:true,
+  sub_ar:"بروست كامل + ٢ برجر بروست + بطاطس كبير + مشروب ١ لتر",
+  sub_en:"Full broast + 2 broast burgers + large fries + 1L drink",
+  includes:["broast:f","burger*2","fries:l","drink:1l"] }
+```
+
+`"broast:f"` means the broast item in size `f`. `"burger*2"` means 2 burgers. Here the items are worth 73 SAR, so the card shows **Save 11 SAR**.
+
+| Field | Meaning |
+|---|---|
+| `id` | A short unique name. It must be different for every item |
+| `cat` | Which tab the item appears under: `deals`, `broast`, `sides` or `drinks` |
+| `icon` | An emoji such as 🍔 🍟 🥤. 🍗 shows the drawn drumstick |
+| `ar`, `en` | Item name |
+| `sub_ar`, `sub_en` | Optional short description |
+| `price` | Price in SAR, for items without sizes |
+| `sizes` | A list of sizes, each with its own `id` and `price` |
+| `spicy:true` | The customer chooses Spicy or Regular. Spicy is selected first |
+| `sauce:true` | The customer can add extra sauces |
+| `popular:true` | The item also appears in the Popular tab |
+| `includes` | For deals only: what's inside, used to work out the saving |
+
+### App name and icon
+
+- The installed app's name is in `manifest.webmanifest`, as `name` and `short_name`. `short_name` is the label under the home-screen icon, so keep it short.
+- To change the icon, replace the three PNG files. **Keep the same file names and sizes:** 192×192, 512×512 and 180×180. Keep the logo away from the edges, because Android crops the corners.
 
 ---
 
@@ -82,47 +155,47 @@ Replace the three PNG files with the new shop's logo. **Keep the same file names
 
 1. Edit the files in the `chickenspot` folder on your computer.
 2. Open GitHub Desktop. The changed files appear on the left.
-3. Type a short summary, such as `Update WhatsApp number`, then click **Commit to main**.
+3. Type a short summary, such as `Update menu prices`, then click **Commit to main**.
 4. Click **Push origin**.
-5. The live site updates within 1–2 minutes.
+5. The live site updates within a few minutes.
 
 **On the GitHub website:** open the file, click the ✏️ pencil, make the change, then click **Commit changes**.
 
-Customers who installed the app get the new version the next time they open it with internet.
+When you change the site, also raise the number in the first line of `sw.js`, for example `chickenspot-v3` to `chickenspot-v4`. This makes installed apps pick up the new version.
 
 ---
 
 ## How to make a site for a new shop
 
 1. Copy the whole `chickenspot` folder and rename it, e.g. `albaik-olaya`. Delete the hidden `.git` folder inside the copy.
-2. Edit the **SHOP SETTINGS** block in `index.html`.
-3. Update the name in `manifest.webmanifest` and the `<title>` at the top of `index.html`.
+2. Edit the **SHOP SETTINGS** block in `index.html`: name, branches, hours and menu.
+3. Update the name in `manifest.webmanifest` and the `<title>` near the top of `index.html`.
 4. Replace the three icon files.
 5. In GitHub Desktop, choose **File → Add local repository**, pick the new folder, and choose **create a repository** if asked.
-6. Click **Publish repository**. **Untick "Keep this code private"**, because free GitHub Pages needs a public repository.
-7. On GitHub, open the repository's **Settings → Pages**. Under Branch, choose **main** and **/ (root)**, then **Save**.
-8. After about a minute, it's live at `https://drfarooqai.github.io/<folder-name>/`.
+6. Click **Publish repository**.
+7. On GitHub, open the repository's **Settings → Pages**. Under Branch, choose **main** and **/ (root)**, then click **Save**.
+8. It's live at `https://drfarooqai.github.io/<folder-name>/`.
 
 ---
 
 ## QR code and printing
 
-Make the QR code from the live link, **https://drfarooqai.github.io/chickenspot/**, and only after the real WhatsApp number is in place. The link never changes when you update the site, so printed QR codes keep working.
+Make the QR code from **https://drfarooqai.github.io/chickenspot/**, and only after the real WhatsApp number is in place. The link stays the same when you update the menu, so printed QR codes keep working.
 
-Good places for the QR code: the counter, the shop window, food bags and the receipt.
+Good places for it: the counter, the shop window, food bags and receipts.
 
 ---
 
 ## Testing checklist
 
-Before handing the site to the shop owner:
-
-- [ ] The order button opens WhatsApp **to the shop's real number**
-- [ ] Prices and items match the shop's menu
-- [ ] The Directions button opens the right place in Google Maps
-- [ ] The Call button dials the right number
+- [ ] An order sends to WhatsApp **at the shop's real number**
+- [ ] Items, sizes, prices and deal savings match the shop's menu
+- [ ] Spicy/Regular and the extra sauces appear in the WhatsApp message
+- [ ] With more than one branch, each branch receives its own orders
+- [ ] The Directions and Call buttons are right
 - [ ] The Open / Closed badge is right for the current time
-- [ ] The Install button works on Android, and Add to Home Screen works on iPhone
+- [ ] Reorder works after the first order
+- [ ] The app installs on Android, and Add to Home Screen works on iPhone
 - [ ] Arabic and English both read correctly
 
 ---
@@ -131,16 +204,18 @@ Before handing the site to the shop owner:
 
 | Problem | Fix |
 |---|---|
-| Changes don't show on the live site | Wait 2 minutes, then refresh. On a phone, close and reopen the app |
-| WhatsApp opens to the wrong number | Check `whatsapp` in SHOP SETTINGS: digits only, starting with 966, no leading 0 |
+| Changes don't show | Wait a few minutes and refresh. Raise the version in `sw.js`. On a phone, close and reopen the app |
+| WhatsApp opens to the wrong number | Check the branch's `whatsapp`: digits only, starting with 966, no leading 0 |
+| The menu is empty or the page is blank | A comma, quote or bracket is missing in SHOP SETTINGS. Compare with the examples above |
+| No "Save" badge on a deal | Check that every `includes` entry matches a real item `id` and size `id`, and that the deal price is lower than the total |
 | No Install button on iPhone | Normal for iPhone. Use Safari → Share → **Add to Home Screen** |
-| Site shows "404" | Check **Settings → Pages** is set to the **main** branch and that the repository is **Public** |
-| Page looks broken after an edit | A comma or quote is probably missing in SHOP SETTINGS. Compare with the example above |
+| Site shows "404" | Check that **Settings → Pages** is set to the **main** branch |
 
 ---
 
 ## Current status
 
-- ✅ Live on GitHub Pages
-- ⚠️ **The WhatsApp number and phone are still placeholders** (`966500000000`). Replace them before printing the QR code.
+- ✅ Pro ordering: tabs, options, deals, cart, notes, branches and reorder
+- ⚠️ **The WhatsApp number and phone are placeholders** (`966500000000`). Replace them before printing the QR code.
 - ⚠️ The map link points to Riyadh in general. Replace it with the shop's exact Google Maps link.
+- ⚠️ The menu items and prices are examples. Replace them with the shop's real menu.
