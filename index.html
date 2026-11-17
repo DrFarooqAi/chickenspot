@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بقعة الدجاج | Chicken Spot</title>
+<meta name="description" content="بروست طازج وساخن — اطلب عبر واتساب واستلم خلال دقائق">
+<meta name="theme-color" content="#C2410C">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="بقعة الدجاج">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="بقعة الدجاج | Chicken Spot">
+<meta property="og:description" content="اطلب بروستك عبر واتساب — ٤ قطع ٢٠ ر.س • ٨ قطع ٣٠ ر.س">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#C2410C;--brand-dark:#7C2D12;--gold:#F59E0B;--cream:#FFF8EE;--ink:#2B1A10;--soft:#8A6A55;--green:#16A34A}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',system-ui,sans-serif;background:var(--cream);color:var(--ink);padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px}
+section{padding:22px 0 6px}
+h2.sec{font-size:20px;font-weight:800;margin-bottom:12px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid #F3E3CF;padding-top:env(safe-area-inset-top)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.pill{border:1.5px solid #EBD6BE;background:#fff;color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(160deg,#FFEDD5 0%,#FED7AA 100%);border-radius:0 0 32px 32px;padding:26px 0 30px;overflow:hidden}
+.hero .wrap{display:flex;align-items:center;gap:14px}
+.hero h1{font-size:30px;font-weight:800;line-height:1.25;color:var(--brand-dark)}
+.hero p{font-size:15px;color:#7a4a2a;margin:8px 0 16px}
+.hero .art{flex:none;width:118px;height:118px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(194,65,12,.18)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:12px 22px;border-radius:14px}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;background:#fff;padding:3px 12px;border-radius:20px;margin-bottom:10px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.dot.closed{background:#DC2626}
+/* features */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.feat{background:#fff;border-radius:16px;padding:12px 6px;text-align:center;font-size:13px;font-weight:600}
+.feat .ic{font-size:24px;display:block;margin-bottom:2px}
+/* menu */
+.card{background:#fff;border-radius:20px;padding:14px;display:flex;align-items:center;gap:14px;margin-bottom:14px;border:2px solid transparent;position:relative;box-shadow:0 2px 0 rgba(124,45,18,.06)}
+.card.best{border-color:var(--gold)}
+.badge{position:absolute;top:-11px;inset-inline-start:16px;background:var(--gold);color:var(--brand-dark);font-size:12px;font-weight:800;padding:2px 12px;border-radius:20px}
+.pic{width:84px;height:84px;flex:none;border-radius:16px;background:#FFF1E0;display:flex;align-items:center;justify-content:center}
+.info{flex:1;min-width:0}
+.info h3{font-size:19px;font-weight:800}
+.info .sub{font-size:13px;color:var(--soft)}
+.price{font-size:20px;font-weight:800;color:var(--brand);margin-top:2px}
+.qty{display:flex;flex-direction:column;align-items:center;gap:4px}
+.qty button{width:40px;height:40px;border-radius:50%;border:0;font-size:24px;font-weight:600;cursor:pointer;line-height:1}
+.plus{background:var(--brand);color:#fff}
+.minus{background:#FFF1E0;color:var(--brand-dark)}
+.qty span{font-size:18px;font-weight:800;min-width:24px;text-align:center}
+.box{background:#fff;border-radius:20px;padding:14px;margin-bottom:12px}
+.box h3{font-size:15px;font-weight:800;margin-bottom:10px}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mode{border:2px solid #F3E3CF;background:#fff;border-radius:14px;padding:12px 8px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;color:var(--ink)}
+.mode.on{border-color:var(--brand);background:#FFF1E0;color:var(--brand-dark)}
+input{width:100%;font:inherit;font-size:15px;padding:12px;border:2px solid #F3E3CF;border-radius:12px;margin-top:10px;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--brand)}
+.loc{width:100%;margin-top:10px;font:inherit;font-size:14px;font-weight:600;padding:12px;border-radius:12px;border:2px dashed var(--brand);background:#fff;color:var(--brand);cursor:pointer}
+.loc.ok{border-style:solid;background:#ECFDF3;border-color:var(--green);color:#166534}
+.hide{display:none!important}
+.pay{font-size:13px;color:var(--soft);text-align:center;margin:2px 0 4px}
+/* info */
+.infogrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:#fff;border-radius:16px;padding:14px;text-decoration:none;color:var(--ink);display:block}
+.tile b{display:block;font-size:14px;font-weight:800}
+.tile span{font-size:13px;color:var(--soft)}
+.tile .ic{font-size:22px}
+.social{display:flex;gap:10px;margin-top:12px}
+.social a{flex:1;background:#fff;border-radius:14px;padding:10px;text-align:center;text-decoration:none;color:var(--ink);font-size:13px;font-weight:600}
+/* install */
+.install{background:#fff;border:2px dashed var(--gold);border-radius:20px;padding:14px;display:flex;align-items:center;gap:12px}
+.install img{width:52px;height:52px;border-radius:14px;flex:none}
+.install b{font-size:15px;display:block}
+.install span{font-size:13px;color:var(--soft)}
+.install button{margin-inline-start:auto;flex:none;background:var(--brand);color:#fff;border:0;font:inherit;font-weight:800;font-size:14px;padding:10px 14px;border-radius:12px;cursor:pointer}
+.ios{font-size:13px;color:var(--brand-dark);background:#FFF1E0;border-radius:12px;padding:10px;margin-top:10px;line-height:1.7}
+footer{text-align:center;font-size:12px;color:#B39A88;padding:22px 0 10px}
+/* bottom bar */
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+.bar .in{max-width:520px;margin:0 auto}
+.err{color:#B91C1C;font-size:13px;font-weight:700;text-align:center;margin-bottom:6px}
+.err:empty{display:none}
+.order{width:100%;border:0;border-radius:16px;background:var(--green);color:#fff;font:inherit;font-size:18px;font-weight:800;padding:14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.order .total{background:rgba(255,255,255,.22);padding:2px 12px;border-radius:10px}
+.order .lbl{display:flex;align-items:center;gap:8px}
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:14px;padding:8px 16px;border-radius:20px;z-index:40;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="brand"><img src="icon-192.png" alt=""><span id="shopName"></span></div>
+  <button class="pill" id="langBtn" onclick="toggleLang()">EN</button>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div style="flex:1">
+    <span class="status"><span class="dot" id="dot"></span><span id="openTxt"></span></span>
+    <h1 id="heroTitle"></h1>
+    <p id="heroSub"></p>
+    <a href="#menu" class="cta" data-t="orderNow"></a>
+  </div>
+  <div class="art"><svg width="78" height="78" viewBox="0 0 64 64"><path d="M40 6c10 0 18 8 18 18 0 9-6 16-14 18l-8 2-10 10c1 3 0 6-3 7-2 1-5 0-6-2-2 1-5 0-6-2-1-3 0-5 3-6l10-10 2-8c2-8 9-15 14-15z" fill="#D9822B"/><path d="M44 12c5 1 9 5 9 11" stroke="#FCD9A0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M26 30l-3 9M33 26l-2 7" stroke="#A85A16" stroke-width="2" stroke-linecap="round"/></svg></div>
+</div></header>
+
+<main class="wrap">
+  <section>
+    <div class="feats">
+      <div class="feat"><span class="ic">🔥</span><span data-t="f1"></span></div>
+      <div class="feat"><span class="ic">⏱️</span><span data-t="f2"></span></div>
+      <div class="feat"><span class="ic">👨‍👩‍👧</span><span data-t="f3"></span></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="sec" data-t="menuTitle"></h2>
+    <div id="items"></div>
+    <div class="box">
+      <h3 data-t="how"></h3>
+      <div class="modes">
+        <button class="mode" id="m-pickup" onclick="setMode('pickup')" data-t="pickup"></button>
+        <button class="mode" id="m-delivery" onclick="setMode('delivery')" data-t="delivery"></button>
+      </div>
+      <input id="name" data-p="name" autocomplete="name">
+      <div id="deliveryBox" class="hide">
+        <button class="loc" id="locBtn" onclick="getLoc()" data-t="loc"></button>
+        <input id="addr" data-p="addr">
+      </div>
+    </div>
+    <p class="pay" data-t="pay"></p>
+  </section>
+
+  <section>
+    <h2 class="sec" data-t="visit"></h2>
+    <div class="infogrid">
+      <a class="tile" id="mapLink" target="_blank" rel="noopener"><span class="ic">📍</span><b data-t="map"></b><span id="areaTxt"></span></a>
+      <a class="tile" id="callLink"><span class="ic">📞</span><b data-t="call"></b><span id="phoneTxt" dir="ltr"></span></a>
+      <div class="tile"><span class="ic">🕛</span><b data-t="hoursT"></b><span id="hoursTxt"></span></div>
+      <a class="tile" onclick="share()" style="cursor:pointer"><span class="ic">🔗</span><b data-t="share"></b><span data-t="shareSub"></span></a>
+    </div>
+    <div class="social" id="social"></div>
+  </section>
+
+  <section id="installSec">
+    <div class="install">
+      <img src="icon-192.png" alt="">
+      <div><b data-t="instT"></b><span data-t="instS"></span></div>
+      <button id="installBtn" onclick="installApp()" data-t="instB"></button>
+    </div>
+    <div class="ios hide" id="iosHelp" data-t="ios"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</main>
+
+<div class="bar"><div class="in">
+  <div class="err" id="err"></div>
+  <button class="order" onclick="sendOrder()">
+    <span class="lbl"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg><span data-t="order"></span></span>
+    <span class="total" id="total">0</span>
+  </button>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= SHOP SETTINGS — change only this block for each new shop ================= */
+const SHOP = {
+  name_ar: "بقعة الدجاج",
+  name_en: "Chicken Spot",
+  whatsapp: "966500000000",                 // shop WhatsApp, international format, no + or spaces
+  phone: "+966500000000",
+  map: "https://maps.google.com/?q=Riyadh", // paste the shop's Google Maps share link
+  area_ar: "الرياض", area_en: "Riyadh",
+  open: 12, close: 1,                       // opening hours, 24h clock (close after midnight is fine)
+  instagram: "", snapchat: "", tiktok: "",  // optional full links
+  items: [
+    { id:"p4", pieces:4, ar:"٤ قطع", en:"4 Pieces", sub_ar:"وجبة فردية مع البطاطس", sub_en:"Single meal with fries", price:20 },
+    { id:"p8", pieces:8, ar:"٨ قطع", en:"8 Pieces", sub_ar:"وجبة عائلية مع البطاطس", sub_en:"Family meal with fries", price:30, best:true }
+  ]
+};
+/* =========================================================================================== */
+
+const T={
+ ar:{orderNow:"🍗 اطلب الآن",heroT:"بروست مقرمش\nطازج وساخن",heroS:"اطلب من جوالك عبر واتساب، واستلم خلال دقائق",f1:"طازج يومياً",f2:"جاهز بسرعة",f3:"وجبات عائلية",menuTitle:"المنيو",how:"كيف تبي طلبك؟",pickup:"🏪 استلام",delivery:"🛵 توصيل",name:"الاسم",addr:"الحي / وصف المكان (اختياري)",loc:"📍 أرسل موقعي",locOk:"✅ تم تحديد الموقع",locWait:"⏳ جاري التحديد...",locFail:"تعذر تحديد الموقع — اكتب الحي",pay:"💳 الدفع عند الاستلام — كاش أو مدى",visit:"زورونا",map:"الموقع",call:"اتصل بنا",hoursT:"أوقات العمل",share:"شارك",shareSub:"أرسل الرابط لأصحابك",instT:"ثبّت التطبيق",instS:"اطلب بضغطة من شاشة جوالك",instB:"تثبيت",ios:"على الآيفون: اضغط زر المشاركة ⬆️ في الأسفل ثم «إضافة إلى الشاشة الرئيسية» ➕",order:"اطلب عبر واتساب",sar:"ر.س",save:n=>`وفّر ${n} ر.س`,openNow:"مفتوح الآن",closedNow:"مغلق الآن",errItem:"أضف وجبة أولاً",errMode:"اختر استلام أو توصيل",errLoc:"أرسل موقعك أو اكتب الحي للتوصيل",copied:"تم نسخ الرابط",
+   msg:"السلام عليكم، أبي أطلب:",tot:"المجموع",type:"نوع الطلب",pk:"استلام من المحل",dl:"توصيل",nm:"الاسم",lc:"الموقع",ad:"العنوان",py:"الدفع عند الاستلام",lang:"EN",hrs:(o,c)=>`${fmt(o,'ar')} – ${fmt(c,'ar')}`},
+ en:{orderNow:"🍗 Order now",heroT:"Crispy broast,\nfresh and hot",heroS:"Order from your phone on WhatsApp and pick up in minutes",f1:"Fresh daily",f2:"Ready fast",f3:"Family meals",menuTitle:"Menu",how:"How would you like it?",pickup:"🏪 Pickup",delivery:"🛵 Delivery",name:"Your name",addr:"Area / directions (optional)",loc:"📍 Send my location",locOk:"✅ Location added",locWait:"⏳ Getting location...",locFail:"Couldn't get location — type your area",pay:"💳 Pay on pickup — cash or mada",visit:"Visit us",map:"Location",call:"Call us",hoursT:"Opening hours",share:"Share",shareSub:"Send the link to friends",instT:"Install the app",instS:"Order in one tap from your home screen",instB:"Install",ios:"On iPhone: tap the Share button ⬆️ at the bottom, then “Add to Home Screen” ➕",order:"Order on WhatsApp",sar:"SAR",save:n=>`Save ${n} SAR`,openNow:"Open now",closedNow:"Closed now",errItem:"Add a meal first",errMode:"Choose pickup or delivery",errLoc:"Send your location or type your area",copied:"Link copied",
+   msg:"Hello, I'd like to order:",tot:"Total",type:"Order type",pk:"Pickup",dl:"Delivery",nm:"Name",lc:"Location",ad:"Address",py:"Pay on pickup",lang:"عربي",hrs:(o,c)=>`${fmt(o,'en')} – ${fmt(c,'en')}`}
+};
+function fmt(h,l){const ap=h<12?(l==='ar'?'ص':'am'):(l==='ar'?'م':'pm');const x=h%12||12;return x+' '+ap}
+let lang="ar",mode="",loc="",qty={};
+SHOP.items.forEach(i=>qty[i.id]=0);
+const $=id=>document.getElementById(id);
+const drum=`<svg width="54" height="54" viewBox="0 0 64 64"><path d="M40 6c10 0 18 8 18 18 0 9-6 16-14 18l-8 2-10 10c1 3 0 6-3 7-2 1-5 0-6-2-2 1-5 0-6-2-1-3 0-5 3-6l10-10 2-8c2-8 9-15 14-15z" fill="#D9822B"/><path d="M44 12c5 1 9 5 9 11" stroke="#FCD9A0" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M26 30l-3 9M33 26l-2 7" stroke="#A85A16" stroke-width="2" stroke-linecap="round"/></svg>`;
+
+function isOpen(){const h=new Date().getHours(),o=SHOP.open,c=SHOP.close;return o<c?(h>=o&&h<c):(h>=o||h<c)}
+function render(){
+  const t=T[lang],base=SHOP.items[0],perPiece=base.price/base.pieces;
+  $('items').innerHTML=SHOP.items.map(i=>{
+    const saving=i.best?Math.round(perPiece*i.pieces-i.price):0;
+    return `<div class="card ${i.best?'best':''}">${saving>0?`<span class="badge">${t.save(saving)}</span>`:''}
+      <div class="pic">${drum}</div>
+      <div class="info"><h3>${i[lang]}</h3><div class="sub">${i['sub_'+lang]}</div><div class="price">${i.price} ${t.sar}</div></div>
+      <div class="qty"><button class="plus" onclick="chg('${i.id}',1)" aria-label="+">+</button><span id="q-${i.id}">${qty[i.id]}</span><button class="minus" onclick="chg('${i.id}',-1)" aria-label="-">−</button></div></div>`}).join('');
+  document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);
+  document.querySelectorAll('[data-p]').forEach(e=>e.placeholder=t[e.dataset.p]);
+  if(loc)$('locBtn').textContent=t.locOk;
+  $('shopName').textContent=SHOP['name_'+lang];
+  $('heroTitle').innerHTML=t.heroT.replace('\n','<br>');
+  $('heroSub').textContent=t.heroS;
+  const op=isOpen();$('openTxt').textContent=op?t.openNow:t.closedNow;$('dot').classList.toggle('closed',!op);
+  $('hoursTxt').textContent=t.hrs(SHOP.open,SHOP.close);
+  $('areaTxt').textContent=SHOP['area_'+lang];
+  $('phoneTxt').textContent=SHOP.phone;
+  $('langBtn').textContent=t.lang;
+  $('social').innerHTML=[['instagram','Instagram'],['snapchat','Snapchat'],['tiktok','TikTok']].filter(s=>SHOP[s[0]]).map(s=>`<a href="${SHOP[s[0]]}" target="_blank" rel="noopener">${s[1]}</a>`).join('');
+  document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.title=SHOP['name_'+lang];
+  $('foot').textContent=SHOP['name_'+lang]+' © '+new Date().getFullYear();
+  total();
+}
+function chg(id,d){qty[id]=Math.max(0,Math.min(50,qty[id]+d));$('q-'+id).textContent=qty[id];total();clearErr();if(navigator.vibrate)try{navigator.vibrate(10)}catch(e){}}
+function sum(){return SHOP.items.reduce((s,i)=>s+qty[i.id]*i.price,0)}
+function total(){$('total').textContent=sum()+' '+T[lang].sar}
+function setMode(m){mode=m;['pickup','delivery'].forEach(x=>$('m-'+x).classList.toggle('on',x===m));$('deliveryBox').classList.toggle('hide',m!=='delivery');clearErr()}
+function getLoc(){const b=$('locBtn'),t=T[lang];if(!navigator.geolocation){showErr(t.locFail);return}b.textContent=t.locWait;
+  navigator.geolocation.getCurrentPosition(p=>{loc=`https://maps.google.com/?q=${p.coords.latitude.toFixed(6)},${p.coords.longitude.toFixed(6)}`;b.textContent=t.locOk;b.classList.add('ok');clearErr()},()=>{b.textContent=t.loc;showErr(t.locFail)},{enableHighAccuracy:true,timeout:10000})}
+function showErr(m){$('err').textContent=m;document.getElementById('menu').scrollIntoView({behavior:'smooth'})}
+function clearErr(){$('err').textContent=''}
+function toast(m){const x=$('toast');x.textContent=m;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
+function sendOrder(){
+  const t=T[lang],addr=$('addr').value.trim(),name=$('name').value.trim();
+  if(sum()===0)return showErr(t.errItem);
+  if(!mode)return showErr(t.errMode);
+  if(mode==='delivery'&&!loc&&!addr)return showErr(t.errLoc);
+  try{localStorage.setItem('cs_name',name)}catch(e){}
+  let m=t.msg+"\n\n";
+  SHOP.items.forEach(i=>{if(qty[i.id])m+=`• ${qty[i.id]} × ${i[lang]} = ${qty[i.id]*i.price} ${t.sar}\n`});
+  m+=`\n*${t.tot}: ${sum()} ${t.sar}*\n${t.type}: ${mode==='pickup'?t.pk:t.dl}\n`;
+  if(name)m+=`${t.nm}: ${name}\n`;
+  if(mode==='delivery'){if(loc)m+=`${t.lc}: ${loc}\n`;if(addr)m+=`${t.ad}: ${addr}\n`}
+  m+=t.py;
+  const a=document.createElement('a');a.href=`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(m)}`;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+}
+function toggleLang(){lang=lang==='ar'?'en':'ar';try{localStorage.setItem('cs_lang',lang)}catch(e){}render()}
+function share(){const u=location.href.split('#')[0];if(navigator.share)navigator.share({title:SHOP['name_'+lang],url:u}).catch(()=>{});else{try{navigator.clipboard.writeText(u);toast(T[lang].copied)}catch(e){}}}
+
+/* install as app */
+let deferred=null;
+const standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+if(standalone)$('installSec').classList.add('hide');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e});
+function installApp(){
+  if(deferred){deferred.prompt();deferred.userChoice.finally(()=>{deferred=null})}
+  else $('iosHelp').classList.remove('hide');
+}
+if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+
+$('mapLink').href=SHOP.map;$('callLink').href='tel:'+SHOP.phone;
+try{const s=localStorage.getItem('cs_lang');if(s)lang=s;const n=localStorage.getItem('cs_name');if(n)$('name').value=n}catch(e){}
+render();
+</script>
+</body>
+</html>
