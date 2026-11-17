@@ -22,7 +22,8 @@ A free ordering website for a broast shop, which customers can also install as a
 - **Reorder in one tap.** After the first order, a "🔁 Reorder your last order" button appears at the top.
 - **Remembers them.** The cart, name, address, language and branch are kept, even if they close the app.
 - **Open / Closed badge.** If the shop is closed, the cart tells customers the order will be prepared at opening time.
-- **Arabic and English.** One tap switches the whole site.
+- **Arabic and English.** The site opens in Arabic on Arabic phones and in English on others, and one tap switches. Browser auto-translate is turned off, because it garbles the menu, for example turning "عرض الاثنين" into "Monday Show".
+- **Food drawings.** Every item has its own drawing, such as a bucket, burger, fries or drink. Wide screens show the menu as a grid.
 - **Installable app.** On Android, the **Install** button adds it to the home screen. On iPhone, customers use Share → **Add to Home Screen**.
 - **Works offline.** After the first visit, the menu opens without internet. Sending the order needs WhatsApp to be online.
 
@@ -100,13 +101,13 @@ The **Popular** tab is made automatically. You don't add it to `categories`. A c
 **1. A simple item** has one price and no options. The + button adds it straight to the cart.
 
 ```js
-{ id:"coleslaw", cat:"sides", icon:"🥗", ar:"كول سلو", en:"Coleslaw", price:4 }
+{ id:"coleslaw", cat:"sides", art:"coleslaw", ar:"كول سلو", en:"Coleslaw", price:4 }
 ```
 
 **2. An item with sizes and options:**
 
 ```js
-{ id:"broast", cat:"broast", icon:"🍗", ar:"بروست دجاج", en:"Broasted Chicken",
+{ id:"broast", cat:"broast", art:"broast", ar:"بروست دجاج", en:"Broasted Chicken",
   spicy:true, sauce:true, popular:true,
   sub_ar:"مقرمش من برا وطري من داخل", sub_en:"Crispy outside, juicy inside",
   sizes:[
@@ -119,7 +120,7 @@ The **Popular** tab is made automatically. You don't add it to `categories`. A c
 **3. A deal** lists what's inside under `includes`. The site adds up those normal prices and shows the saving.
 
 ```js
-{ id:"family", cat:"deals", icon:"🍗", ar:"عرض العائلة", en:"Family Deal", price:62,
+{ id:"family", cat:"deals", art:"bucket", ar:"عرض العائلة", en:"Family Deal", price:62,
   spicy:true, sauce:true, popular:true,
   sub_ar:"بروست كامل + ٢ برجر بروست + بطاطس كبير + مشروب ١ لتر",
   sub_en:"Full broast + 2 broast burgers + large fries + 1L drink",
@@ -132,7 +133,7 @@ The **Popular** tab is made automatically. You don't add it to `categories`. A c
 |---|---|
 | `id` | A short unique name. It must be different for every item |
 | `cat` | Which tab the item appears under: `deals`, `broast`, `sides` or `drinks` |
-| `icon` | An emoji such as 🍔 🍟 🥤. 🍗 shows the drawn drumstick |
+| `art` | The food drawing on the card: `bucket`, `broast`, `burger`, `strips`, `wings`, `fries`, `coleslaw`, `hummus`, `bun`, `soda`, `water` or `juice` |
 | `ar`, `en` | Item name |
 | `sub_ar`, `sub_en` | Optional short description |
 | `price` | Price in SAR, for items without sizes |
@@ -161,7 +162,7 @@ The **Popular** tab is made automatically. You don't add it to `categories`. A c
 
 **On the GitHub website:** open the file, click the ✏️ pencil, make the change, then click **Commit changes**.
 
-When you change the site, also raise the number in the first line of `sw.js`, for example `chickenspot-v3` to `chickenspot-v4`. This makes installed apps pick up the new version.
+When you change the site, also raise the number in the first line of `sw.js`, for example `chickenspot-v4` to `chickenspot-v5`. This makes installed apps pick up the new version.
 
 ---
 
